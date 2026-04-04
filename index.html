@@ -1,465 +1,676 @@
 <!DOCTYPE html>
-<html lang="ru">
-
+<html lang="uz">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-    <title>Все 12 времён английского | Тесты с полями ввода</title>
+    <title>Ingliz tilidan baza olish / Basics of English</title>
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
+
     <nav class="navbar">
         <div class="nav-container">
-            <div class="nav-logo">📚 English Tenses</div>
-            <ul class="nav-menu" id="navMenu">
-                <li><a href="#present-simple">Present Simple</a></li>
-                <li><a href="#present-continuous">Present Continuous</a></li>
-                <li><a href="#present-perfect">Present Perfect</a></li>
-                <li><a href="#present-perfect-continuous">Pres. Perfect Cont.</a></li>
-                <li><a href="#past-simple">Past Simple</a></li>
-                <li><a href="#past-continuous">Past Continuous</a></li>
-                <li><a href="#past-perfect">Past Perfect</a></li>
-                <li><a href="#past-perfect-continuous">Past Perfect Cont.</a></li>
-                <li><a href="#future-simple">Future Simple</a></li>
-                <li><a href="#future-continuous">Future Continuous</a></li>
-                <li><a href="#future-perfect">Future Perfect</a></li>
-                <li><a href="#future-perfect-continuous">Future Perfect Cont.</a></li>
+            <div class="logo">📚 Ingliz tili bazasi / Basics of English</div>
+            <ul class="nav-links">
+                <li><a href="#tenses">Zamonlar</a></li>
+                <li><a href="#vocabulary">Vocabulary</a></li>
+                <li><a href="#prepositions">In/On/At</a></li>
+                <li><a href="#all-prepositions">Barcha predloglar</a></li>
             </ul>
         </div>
     </nav>
 
-    <main class="container">
-        <section class="header">
-            <h1>📚 Все 12 времён английского языка</h1>
-            <p>Изучайте теорию, ключевые слова и проверяйте себя</p>
-        </section>
+    <div class="container">
+        <div class="hero" id="tenses">
+            <h1>📚 12 ingliz zamoni / 12 English Tenses</h1>
+            <p>Har bir zamon o'z rangida | 5+ misol | Testlar</p>
+        </div>
 
-        <section class="tense-section" id="present-simple">
-            <h2>🔵 Present Simple</h2>
-            <div class="theory">
-                <div class="formula">
-                    <h3>Формула:</h3>
-                    <p>I/You/We/They + V1<br>He/She/It + V1 + S</p>
+        <div class="tenses-grid">
+            <!-- 1. Present Simple -->
+            <div class="tense-card tense-present-simple">
+                <div class="card-header">
+                    <span class="card-icon">🔵</span>
+                    <h2>Present Simple</h2>
                 </div>
-                <div class="examples">
-                    <h3>Примеры:</h3>
-                    <p>✓ I work every day.<br>✓ She works in an office.</p>
-                </div>
-                <div class="keywords">
-                    <h3>Ключевые слова:</h3>
-                    <div class="keyword-list"><span class="keyword">always</span><span
-                            class="keyword">usually</span><span class="keyword">often</span><span
-                            class="keyword">sometimes</span><span class="keyword">never</span><span
-                            class="keyword">every day</span><span class="keyword">every week</span><span
-                            class="keyword">on Mondays</span></div>
-                </div>
-            </div>
-            <div class="test-block">
-                <h3>Проверьте себя:</h3>
-                <div class="question">
-                    <p>1. He [type here] (play) football every Sunday.</p><input type="text" class="answer-input"
-                        placeholder="Введите ответ...">
-                </div>
-                <div class="question">
-                    <p>2. They [type here] (not / like) coffee.</p><input type="text" class="answer-input"
-                        placeholder="Введите ответ...">
-                </div>
-                <div class="question">
-                    <p>3. [type here] (you / work) here?</p><input type="text" class="answer-input"
-                        placeholder="Введите ответ...">
-                    <a href="check_box.html"><button class="check-btn">Check Answer</button></a>
+                <div class="card-content">
+                    <div class="formula">I/You/We/They + V1 | He/She/It + V1 + s</div>
+                    <div class="examples">
+                        <h4>📌 5+ misol:</h4>
+                        <p>✅ I work every day.</p>
+                        <p>✅ She works in an office.</p>
+                        <p>✅ They play football on Sundays.</p>
+                        <p>✅ He goes to school by bus.</p>
+                        <p>✅ We eat breakfast at 8 AM.</p>
+                        <p>✅ The sun rises in the east.</p>
+                    </div>
+                    <div class="keywords">
+                        <span>always</span> <span>usually</span> <span>often</span> <span>sometimes</span>
+                        <span>never</span> <span>every day</span> <span>on Mondays</span>
+                    </div>
+                    <div class="self-test">
+                        <h4>📝 Testlar:</h4>
+                        <div class="question"><label>1. He _____ (play) football every Sunday.</label><input type="text" class="answer-input" data-answer="plays"><button class="show-answer">Javobni ko'rish</button><span class="answer-display"></span></div>
+                        <div class="question"><label>2. They _____ (not / like) coffee.</label><input type="text" class="answer-input" data-answer="don't like"><button class="show-answer">Javobni ko'rish</button><span class="answer-display"></span></div>
+                        <div class="question"><label>3. _____ (you / work) here?</label><input type="text" class="answer-input" data-answer="Do you work"><button class="show-answer">Javobni ko'rish</button><span class="answer-display"></span></div>
+                        <div class="question"><label>4. She _____ (go) to school by bus.</label><input type="text" class="answer-input" data-answer="goes"><button class="show-answer">Javobni ko'rish</button><span class="answer-display"></span></div>
+                        <div class="question"><label>5. We _____ (not / eat) meat.</label><input type="text" class="answer-input" data-answer="don't eat"><button class="show-answer">Javobni ko'rish</button><span class="answer-display"></span></div>
+                    </div>
                 </div>
             </div>
-        </section>
 
-        <section class="tense-section" id="present-continuous">
-            <h2>🟢 Present Continuous</h2>
-            <div class="theory">
-                <div class="formula">
-                    <h3>Формула:</h3>
-                    <p>I + am + Ving<br>He/She/It + is + Ving<br>You/We/They + are + Ving</p>
+            <!-- 2. Present Continuous -->
+            <div class="tense-card tense-present-continuous">
+                <div class="card-header">
+                    <span class="card-icon">🟢</span>
+                    <h2>Present Continuous</h2>
                 </div>
-                <div class="examples">
-                    <h3>Примеры:</h3>
-                    <p>✓ I am reading now.<br>✓ She is cooking dinner.</p>
-                </div>
-                <div class="keywords">
-                    <h3>Ключевые слова:</h3>
-                    <div class="keyword-list"><span class="keyword">now</span><span class="keyword">right
-                            now</span><span class="keyword">at the moment</span><span class="keyword">today</span><span
-                            class="keyword">this week</span><span class="keyword">look!</span><span
-                            class="keyword">listen!</span></div>
-                </div>
-            </div>
-            <div class="test-block">
-                <h3>Проверьте себя:</h3>
-                <div class="question">
-                    <p>1. She [type here] (read) a book right now.</p><input type="text" class="answer-input"
-                        placeholder="Введите ответ...">
-                </div>
-                <div class="question">
-                    <p>2. They [type here] (not / sleep) at the moment.</p><input type="text" class="answer-input"
-                        placeholder="Введите ответ...">
-                </div>
-                <div class="question">
-                    <p>3. [type here] (you / watch) TV now?</p><input type="text" class="answer-input"
-                        placeholder="Введите ответ...">
-                    <a href="check_box.html"><button class="check-btn">Check Answer</button></a>
+                <div class="card-content">
+                    <div class="formula">I + am + Ving | He/She/It + is + Ving | You/We/They + are + Ving</div>
+                    <div class="examples">
+                        <h4>📌 5+ misol:</h4>
+                        <p>✅ I am reading now.</p>
+                        <p>✅ She is cooking dinner.</p>
+                        <p>✅ They are playing outside.</p>
+                        <p>✅ He is sleeping at the moment.</p>
+                        <p>✅ We are watching TV.</p>
+                        <p>✅ The baby is crying.</p>
+                    </div>
+                    <div class="keywords">
+                        <span>now</span> <span>right now</span> <span>at the moment</span> <span>today</span>
+                        <span>look!</span> <span>listen!</span>
+                    </div>
+                    <div class="self-test">
+                        <h4>📝 Testlar:</h4>
+                        <div class="question"><label>1. She _____ (read) a book right now.</label><input type="text" class="answer-input" data-answer="is reading"><button class="show-answer">Javobni ko'rish</button><span class="answer-display"></span></div>
+                        <div class="question"><label>2. They _____ (not / sleep) at the moment.</label><input type="text" class="answer-input" data-answer="aren't sleeping"><button class="show-answer">Javobni ko'rish</button><span class="answer-display"></span></div>
+                        <div class="question"><label>3. _____ (you / watch) TV now?</label><input type="text" class="answer-input" data-answer="Are you watching"><button class="show-answer">Javobni ko'rish</button><span class="answer-display"></span></div>
+                        <div class="question"><label>4. Listen! Someone _____ (sing).</label><input type="text" class="answer-input" data-answer="is singing"><button class="show-answer">Javobni ko'rish</button><span class="answer-display"></span></div>
+                        <div class="question"><label>5. I _____ (study) for my exam this week.</label><input type="text" class="answer-input" data-answer="am studying"><button class="show-answer">Javobni ko'rish</button><span class="answer-display"></span></div>
+                    </div>
                 </div>
             </div>
-        </section>
 
-        <section class="tense-section" id="present-perfect">
-            <h2>🟡 Present Perfect</h2>
-            <div class="theory">
-                <div class="formula">
-                    <h3>Формула:</h3>
-                    <p>I/You/We/They + have + V3<br>He/She/It + has + V3</p>
+            <!-- 3. Present Perfect -->
+            <div class="tense-card tense-present-perfect">
+                <div class="card-header">
+                    <span class="card-icon">🟡</span>
+                    <h2>Present Perfect</h2>
                 </div>
-                <div class="examples">
-                    <h3>Примеры:</h3>
-                    <p>✓ I have finished.<br>✓ She has gone home.</p>
-                </div>
-                <div class="keywords">
-                    <h3>Ключевые слова:</h3>
-                    <div class="keyword-list"><span class="keyword">ever</span><span class="keyword">never</span><span
-                            class="keyword">already</span><span class="keyword">yet</span><span
-                            class="keyword">just</span><span class="keyword">since</span><span
-                            class="keyword">for</span><span class="keyword">recently</span></div>
-                </div>
-            </div>
-            <div class="test-block">
-                <h3>Проверьте себя:</h3>
-                <div class="question">
-                    <p>1. She [type here] (already / finish) her assignment before the deadline.</p><input type="text"
-                        class="answer-input" placeholder="Введите ответ...">
-                </div>
-                <div class="question">
-                    <p>2. I [type here] (never / be) to Paris.</p><input type="text" class="answer-input"
-                        placeholder="Введите ответ...">
-                </div>
-                <div class="question">
-                    <p>3. [type here] (you / eat) lunch yet?</p><input type="text" class="answer-input"
-                        placeholder="Введите ответ...">
-                    <a href="check_box.html"><button class="check-btn">Check Answer</button></a>
+                <div class="card-content">
+                    <div class="formula">I/You/We/They + have + V3 | He/She/It + has + V3</div>
+                    <div class="examples">
+                        <h4>📌 5+ misol:</h4>
+                        <p>✅ I have finished my homework.</p>
+                        <p>✅ She has gone to London.</p>
+                        <p>✅ They have seen that movie.</p>
+                        <p>✅ He has eaten already.</p>
+                        <p>✅ We have lived here for 5 years.</p>
+                        <p>✅ I have never been to Paris.</p>
+                    </div>
+                    <div class="keywords">
+                        <span>ever</span> <span>never</span> <span>already</span> <span>yet</span>
+                        <span>just</span> <span>since</span> <span>for</span>
+                    </div>
+                    <div class="self-test">
+                        <h4>📝 Testlar:</h4>
+                        <div class="question"><label>1. She _____ (already / finish) her assignment.</label><input type="text" class="answer-input" data-answer="has already finished"><button class="show-answer">Javobni ko'rish</button><span class="answer-display"></span></div>
+                        <div class="question"><label>2. I _____ (never / be) to Paris.</label><input type="text" class="answer-input" data-answer="have never been"><button class="show-answer">Javobni ko'rish</button><span class="answer-display"></span></div>
+                        <div class="question"><label>3. _____ (you / eat) lunch yet?</label><input type="text" class="answer-input" data-answer="Have you eaten"><button class="show-answer">Javobni ko'rish</button><span class="answer-display"></span></div>
+                        <div class="question"><label>4. He _____ (live) here since 2010.</label><input type="text" class="answer-input" data-answer="has lived"><button class="show-answer">Javobni ko'rish</button><span class="answer-display"></span></div>
+                        <div class="question"><label>5. They _____ (not / see) the new movie.</label><input type="text" class="answer-input" data-answer="haven't seen"><button class="show-answer">Javobni ko'rish</button><span class="answer-display"></span></div>
+                    </div>
                 </div>
             </div>
-        </section>
 
-        <section class="tense-section" id="present-perfect-continuous">
-            <h2>🟠 Present Perfect Continuous</h2>
-            <div class="theory">
-                <div class="formula">
-                    <h3>Формула:</h3>
-                    <p>I/You/We/They + have been + Ving<br>He/She/It + has been + Ving</p>
+            <!-- 4. Present Perfect Continuous -->
+            <div class="tense-card tense-present-perf-cont">
+                <div class="card-header">
+                    <span class="card-icon">🟠</span>
+                    <h2>Present Perfect Continuous</h2>
                 </div>
-                <div class="examples">
-                    <h3>Примеры:</h3>
-                    <p>✓ I have been studying for 3 hours.</p>
-                </div>
-                <div class="keywords">
-                    <h3>Ключевые слова:</h3>
-                    <div class="keyword-list"><span class="keyword">for</span><span class="keyword">since</span><span
-                            class="keyword">all day</span><span class="keyword">recently</span><span
-                            class="keyword">lately</span></div>
-                </div>
-            </div>
-            <div class="test-block">
-                <h3>Проверьте себя:</h3>
-                <div class="question">
-                    <p>1. I [type here] (study) for 3 hours.</p><input type="text" class="answer-input"
-                        placeholder="Введите ответ...">
-                </div>
-                <div class="question">
-                    <p>2. She [type here] (work) since 8 AM.</p><input type="text" class="answer-input"
-                        placeholder="Введите ответ...">
-                </div>
-                <div class="question">
-                    <p>3. How long [type here] (you / wait)?</p><input type="text" class="answer-input"
-                        placeholder="Введите ответ...">
-                    <a href="check_box.html"><button class="check-btn">Check Answer</button></a>
+                <div class="card-content">
+                    <div class="formula">have/has + been + Ving</div>
+                    <div class="examples">
+                        <h4>📌 5+ misol:</h4>
+                        <p>✅ I have been studying for 3 hours.</p>
+                        <p>✅ She has been working since morning.</p>
+                        <p>✅ They have been playing football all day.</p>
+                        <p>✅ He has been waiting for an hour.</p>
+                        <p>✅ We have been living here since 2015.</p>
+                        <p>✅ It has been raining all week.</p>
+                    </div>
+                    <div class="keywords">
+                        <span>for</span> <span>since</span> <span>all day</span> <span>recently</span>
+                        <span>lately</span>
+                    </div>
+                    <div class="self-test">
+                        <h4>📝 Testlar:</h4>
+                        <div class="question"><label>1. I _____ (study) for 3 hours.</label><input type="text" class="answer-input" data-answer="have been studying"><button class="show-answer">Javobni ko'rish</button><span class="answer-display"></span></div>
+                        <div class="question"><label>2. She _____ (work) since 8 AM.</label><input type="text" class="answer-input" data-answer="has been working"><button class="show-answer">Javobni ko'rish</button><span class="answer-display"></span></div>
+                        <div class="question"><label>3. How long _____ (you / wait)?</label><input type="text" class="answer-input" data-answer="have you been waiting"><button class="show-answer">Javobni ko'rish</button><span class="answer-display"></span></div>
+                        <div class="question"><label>4. They _____ (play) tennis all morning.</label><input type="text" class="answer-input" data-answer="have been playing"><button class="show-answer">Javobni ko'rish</button><span class="answer-display"></span></div>
+                        <div class="question"><label>5. He _____ (feel) tired lately.</label><input type="text" class="answer-input" data-answer="has been feeling"><button class="show-answer">Javobni ko'rish</button><span class="answer-display"></span></div>
+                    </div>
                 </div>
             </div>
-        </section>
 
-        <section class="tense-section" id="past-simple">
-            <h2>⚪ Past Simple</h2>
-            <div class="theory">
-                <div class="formula">
-                    <h3>Формула:</h3>
-                    <p>Все лица + V2 (-ed или 2-я форма)</p>
+            <!-- 5. Past Simple -->
+            <div class="tense-card tense-past-simple">
+                <div class="card-header">
+                    <span class="card-icon">⚪</span>
+                    <h2>Past Simple</h2>
                 </div>
-                <div class="examples">
-                    <h3>Примеры:</h3>
-                    <p>✓ I worked yesterday.<br>✓ She went to London.</p>
-                </div>
-                <div class="keywords">
-                    <h3>Ключевые слова:</h3>
-                    <div class="keyword-list"><span class="keyword">yesterday</span><span class="keyword">last
-                            week</span><span class="keyword">last month</span><span class="keyword">ago</span><span
-                            class="keyword">in 2010</span></div>
-                </div>
-            </div>
-            <div class="test-block">
-                <h3>Проверьте себя:</h3>
-                <div class="question">
-                    <p>1. I [type here] (go) to the cinema yesterday.</p><input type="text" class="answer-input"
-                        placeholder="Введите ответ...">
-                </div>
-                <div class="question">
-                    <p>2. She [type here] (not / see) him last week.</p><input type="text" class="answer-input"
-                        placeholder="Введите ответ...">
-                </div>
-                <div class="question">
-                    <p>3. [type here] (you / buy) that car?</p><input type="text" class="answer-input"
-                        placeholder="Введите ответ...">
-                    <a href="check_box.html"><button class="check-btn">Check Answer</button></a>
+                <div class="card-content">
+                    <div class="formula">V2 (-ed yoki 2-shakl)</div>
+                    <div class="examples">
+                        <h4>📌 5+ misol:</h4>
+                        <p>✅ I worked yesterday.</p>
+                        <p>✅ She went to London.</p>
+                        <p>✅ They ate pizza.</p>
+                        <p>✅ He came home late.</p>
+                        <p>✅ We watched a movie.</p>
+                        <p>✅ I bought a new car.</p>
+                    </div>
+                    <div class="keywords">
+                        <span>yesterday</span> <span>last week</span> <span>last month</span>
+                        <span>ago</span> <span>in 2010</span>
+                    </div>
+                    <div class="self-test">
+                        <h4>📝 Testlar:</h4>
+                        <div class="question"><label>1. I _____ (go) to the cinema yesterday.</label><input type="text" class="answer-input" data-answer="went"><button class="show-answer">Javobni ko'rish</button><span class="answer-display"></span></div>
+                        <div class="question"><label>2. She _____ (not / see) him last week.</label><input type="text" class="answer-input" data-answer="didn't see"><button class="show-answer">Javobni ko'rish</button><span class="answer-display"></span></div>
+                        <div class="question"><label>3. _____ (you / buy) that car?</label><input type="text" class="answer-input" data-answer="Did you buy"><button class="show-answer">Javobni ko'rish</button><span class="answer-display"></span></div>
+                        <div class="question"><label>4. We _____ (eat) dinner at 7 PM.</label><input type="text" class="answer-input" data-answer="ate"><button class="show-answer">Javobni ko'rish</button><span class="answer-display"></span></div>
+                        <div class="question"><label>5. He _____ (come) home late.</label><input type="text" class="answer-input" data-answer="came"><button class="show-answer">Javobni ko'rish</button><span class="answer-display"></span></div>
+                    </div>
                 </div>
             </div>
-        </section>
 
-        <section class="tense-section" id="past-continuous">
-            <h2>⚪ Past Continuous</h2>
-            <div class="theory">
-                <div class="formula">
-                    <h3>Формула:</h3>
-                    <p>I/He/She/It + was + Ving<br>You/We/They + were + Ving</p>
+            <!-- 6. Past Continuous -->
+            <div class="tense-card tense-past-continuous">
+                <div class="card-header">
+                    <span class="card-icon">🟣</span>
+                    <h2>Past Continuous</h2>
                 </div>
-                <div class="examples">
-                    <h3>Примеры:</h3>
-                    <p>✓ I was sleeping at 10 PM.</p>
-                </div>
-                <div class="keywords">
-                    <h3>Ключевые слова:</h3>
-                    <div class="keyword-list"><span class="keyword">at 5 PM yesterday</span><span
-                            class="keyword">when</span><span class="keyword">while</span><span class="keyword">all day
-                            yesterday</span></div>
+                <div class="card-content">
+                    <div class="formula">was/were + Ving</div>
+                    <div class="examples">
+                        <h4>📌 5+ misol:</h4>
+                        <p>✅ I was sleeping at 10 PM.</p>
+                        <p>✅ They were playing football.</p>
+                        <p>✅ She was cooking dinner.</p>
+                        <p>✅ He was reading a book.</p>
+                        <p>✅ We were watching TV.</p>
+                        <p>✅ It was raining heavily.</p>
+                    </div>
+                    <div class="keywords">
+                        <span>at 5 PM yesterday</span> <span>when</span> <span>while</span>
+                        <span>all day yesterday</span>
+                    </div>
+                    <div class="self-test">
+                        <h4>📝 Testlar:</h4>
+                        <div class="question"><label>1. I _____ (sleep) when you called.</label><input type="text" class="answer-input" data-answer="was sleeping"><button class="show-answer">Javobni ko'rish</button><span class="answer-display"></span></div>
+                        <div class="question"><label>2. They _____ (play) tennis at 5 PM.</label><input type="text" class="answer-input" data-answer="were playing"><button class="show-answer">Javobni ko'rish</button><span class="answer-display"></span></div>
+                        <div class="question"><label>3. She _____ (cook) while he was reading.</label><input type="text" class="answer-input" data-answer="was cooking"><button class="show-answer">Javobni ko'rish</button><span class="answer-display"></span></div>
+                        <div class="question"><label>4. What _____ (you / do) at 8 PM?</label><input type="text" class="answer-input" data-answer="were you doing"><button class="show-answer">Javobni ko'rish</button><span class="answer-display"></span></div>
+                        <div class="question"><label>5. The sun _____ (shine) all morning.</label><input type="text" class="answer-input" data-answer="was shining"><button class="show-answer">Javobni ko'rish</button><span class="answer-display"></span></div>
+                    </div>
                 </div>
             </div>
-            <div class="test-block">
-                <h3>Проверьте себя:</h3>
-                <div class="question">
-                    <p>1. I [type here] (sleep) when you called.</p><input type="text" class="answer-input"
-                        placeholder="Введите ответ...">
-                </div>
-                <div class="question">
-                    <p>2. They [type here] (play) tennis at 5 PM.</p><input type="text" class="answer-input"
-                        placeholder="Введите ответ...">
-                    <a href="check_box.html"><button class="check-btn">Check Answer</button></a>
-                </div>
-            </div>
-        </section>
 
-        <section class="tense-section" id="past-perfect">
-            <h2>⚪ Past Perfect</h2>
-            <div class="theory">
-                <div class="formula">
-                    <h3>Формула:</h3>
-                    <p>Все лица + had + V3</p>
+            <!-- 7. Past Perfect -->
+            <div class="tense-card tense-past-perfect">
+                <div class="card-header">
+                    <span class="card-icon">🤎</span>
+                    <h2>Past Perfect</h2>
                 </div>
-                <div class="examples">
-                    <h3>Примеры:</h3>
-                    <p>✓ I had eaten before he came.</p>
-                </div>
-                <div class="keywords">
-                    <h3>Ключевые слова:</h3>
-                    <div class="keyword-list"><span class="keyword">before</span><span class="keyword">after</span><span
-                            class="keyword">by the time</span><span class="keyword">already</span><span
-                            class="keyword">just</span></div>
+                <div class="card-content">
+                    <div class="formula">had + V3</div>
+                    <div class="examples">
+                        <h4>📌 5+ misol:</h4>
+                        <p>✅ I had eaten before he came.</p>
+                        <p>✅ She had left by then.</p>
+                        <p>✅ They had finished work.</p>
+                        <p>✅ He had never seen such beauty.</p>
+                        <p>✅ We had already eaten.</p>
+                        <p>✅ The train had left.</p>
+                    </div>
+                    <div class="keywords">
+                        <span>before</span> <span>after</span> <span>by the time</span> <span>already</span>
+                        <span>just</span>
+                    </div>
+                    <div class="self-test">
+                        <h4>📝 Testlar:</h4>
+                        <div class="question"><label>1. I _____ (eat) before he arrived.</label><input type="text" class="answer-input" data-answer="had eaten"><button class="show-answer">Javobni ko'rish</button><span class="answer-display"></span></div>
+                        <div class="question"><label>2. She _____ (finish) her work by 6 PM.</label><input type="text" class="answer-input" data-answer="had finished"><button class="show-answer">Javobni ko'rish</button><span class="answer-display"></span></div>
+                        <div class="question"><label>3. They _____ (already / leave) when we came.</label><input type="text" class="answer-input" data-answer="had already left"><button class="show-answer">Javobni ko'rish</button><span class="answer-display"></span></div>
+                        <div class="question"><label>4. He _____ (never / see) such a beautiful place.</label><input type="text" class="answer-input" data-answer="had never seen"><button class="show-answer">Javobni ko'rish</button><span class="answer-display"></span></div>
+                        <div class="question"><label>5. We _____ (complete) the project before the deadline.</label><input type="text" class="answer-input" data-answer="had completed"><button class="show-answer">Javobni ko'rish</button><span class="answer-display"></span></div>
+                    </div>
                 </div>
             </div>
-            <div class="test-block">
-                <h3>Проверьте себя:</h3>
-                <div class="question">
-                    <p>1. I [type here] (eat) before he arrived.</p><input type="text" class="answer-input"
-                        placeholder="Введите ответ...">
-                </div>
-                <div class="question">
-                    <p>2. She [type here] (finish) her work by 6 PM.</p><input type="text" class="answer-input"
-                        placeholder="Введите ответ..."><button class="check-btn">Check Answer</button>
-                </div>
-            </div>
-        </section>
 
-        <section class="tense-section" id="past-perfect-continuous">
-            <h2>⚪ Past Perfect Continuous</h2>
-            <div class="theory">
-                <div class="formula">
-                    <h3>Формула:</h3>
-                    <p>Все лица + had been + Ving</p>
+            <!-- 8. Past Perfect Continuous -->
+            <div class="tense-card tense-past-perf-cont">
+                <div class="card-header">
+                    <span class="card-icon">🧡</span>
+                    <h2>Past Perfect Continuous</h2>
                 </div>
-                <div class="examples">
-                    <h3>Примеры:</h3>
-                    <p>✓ I had been waiting for an hour.</p>
-                </div>
-                <div class="keywords">
-                    <h3>Ключевые слова:</h3>
-                    <div class="keyword-list"><span class="keyword">for</span><span class="keyword">since</span><span
-                            class="keyword">before</span><span class="keyword">by the time</span></div>
+                <div class="card-content">
+                    <div class="formula">had been + Ving</div>
+                    <div class="examples">
+                        <h4>📌 5+ misol:</h4>
+                        <p>✅ I had been waiting for an hour.</p>
+                        <p>✅ She had been studying all day.</p>
+                        <p>✅ They had been playing for hours.</p>
+                        <p>✅ He had been working there since 2015.</p>
+                        <p>✅ We had been traveling for 10 hours.</p>
+                        <p>✅ It had been raining all night.</p>
+                    </div>
+                    <div class="keywords">
+                        <span>for</span> <span>since</span> <span>before</span> <span>by the time</span>
+                        <span>all day</span>
+                    </div>
+                    <div class="self-test">
+                        <h4>📝 Testlar:</h4>
+                        <div class="question"><label>1. I _____ (wait) for an hour when she arrived.</label><input type="text" class="answer-input" data-answer="had been waiting"><button class="show-answer">Javobni ko'rish</button><span class="answer-display"></span></div>
+                        <div class="question"><label>2. They _____ (live) in London for 5 years before moving.</label><input type="text" class="answer-input" data-answer="had been living"><button class="show-answer">Javobni ko'rish</button><span class="answer-display"></span></div>
+                        <div class="question"><label>3. He _____ (work) there since 2015.</label><input type="text" class="answer-input" data-answer="had been working"><button class="show-answer">Javobni ko'rish</button><span class="answer-display"></span></div>
+                        <div class="question"><label>4. We _____ (travel) for 10 hours when the car broke down.</label><input type="text" class="answer-input" data-answer="had been traveling"><button class="show-answer">Javobni ko'rish</button><span class="answer-display"></span></div>
+                        <div class="question"><label>5. She _____ (feel) sick because she had been eating too much.</label><input type="text" class="answer-input" data-answer="had been feeling"><button class="show-answer">Javobni ko'rish</button><span class="answer-display"></span></div>
+                    </div>
                 </div>
             </div>
-            <div class="test-block">
-                <h3>Проверьте себя:</h3>
-                <div class="question">
-                    <p>1. I [type here] (wait) for an hour when she arrived.</p><input type="text" class="answer-input"
-                        placeholder="Введите ответ...">
-                </div>
-                <div class="question">
-                    <p>2. They [type here] (live) in London for 5 years before moving.</p><input type="text"
-                        class="answer-input" placeholder="Введите ответ...">
-                    <a href="check_box.html"><button class="check-btn">Check Answer</button></a>
-                </div>
-            </div>
-        </section>
 
-        <section class="tense-section" id="future-simple">
-            <h2>🔮 Future Simple</h2>
-            <div class="theory">
-                <div class="formula">
-                    <h3>Формула:</h3>
-                    <p>Все лица + will + V1</p>
+            <!-- 9. Future Simple -->
+            <div class="tense-card tense-future-simple">
+                <div class="card-header">
+                    <span class="card-icon">🔮</span>
+                    <h2>Future Simple</h2>
                 </div>
-                <div class="examples">
-                    <h3>Примеры:</h3>
-                    <p>✓ I will call you.</p>
-                </div>
-                <div class="keywords">
-                    <h3>Ключевые слова:</h3>
-                    <div class="keyword-list"><span class="keyword">tomorrow</span><span class="keyword">next
-                            week</span><span class="keyword">next month</span><span class="keyword">soon</span><span
-                            class="keyword">one day</span></div>
+                <div class="card-content">
+                    <div class="formula">will + V1</div>
+                    <div class="examples">
+                        <h4>📌 5+ misol:</h4>
+                        <p>✅ I will call you tomorrow.</p>
+                        <p>✅ She will come to the party.</p>
+                        <p>✅ They will arrive soon.</p>
+                        <p>✅ He will help you.</p>
+                        <p>✅ We will win the game.</p>
+                        <p>✅ It will rain today.</p>
+                    </div>
+                    <div class="keywords">
+                        <span>tomorrow</span> <span>next week</span> <span>next month</span>
+                        <span>soon</span> <span>one day</span>
+                    </div>
+                    <div class="self-test">
+                        <h4>📝 Testlar:</h4>
+                        <div class="question"><label>1. I _____ (call) you tomorrow.</label><input type="text" class="answer-input" data-answer="will call"><button class="show-answer">Javobni ko'rish</button><span class="answer-display"></span></div>
+                        <div class="question"><label>2. She _____ (not / come) to the party.</label><input type="text" class="answer-input" data-answer="won't come"><button class="show-answer">Javobni ko'rish</button><span class="answer-display"></span></div>
+                        <div class="question"><label>3. _____ (you / help) me?</label><input type="text" class="answer-input" data-answer="Will you help"><button class="show-answer">Javobni ko'rish</button><span class="answer-display"></span></div>
+                        <div class="question"><label>4. We _____ (visit) grandma next week.</label><input type="text" class="answer-input" data-answer="will visit"><button class="show-answer">Javobni ko'rish</button><span class="answer-display"></span></div>
+                        <div class="question"><label>5. He _____ (probably / arrive) late.</label><input type="text" class="answer-input" data-answer="will probably arrive"><button class="show-answer">Javobni ko'rish</button><span class="answer-display"></span></div>
+                    </div>
                 </div>
             </div>
-            <div class="test-block">
-                <h3>Проверьте себя:</h3>
-                <div class="question">
-                    <p>1. I [type here] (call) you tomorrow.</p><input type="text" class="answer-input"
-                        placeholder="Введите ответ...">
-                </div>
-                <div class="question">
-                    <p>2. She [type here] (not / come) to the party.</p><input type="text" class="answer-input"
-                        placeholder="Введите ответ...">
-                    <a href="check_box.html"><button class="check-btn">Check Answer</button></a>
-                </div>
-            </div>
-        </section>
 
-        <section class="tense-section" id="future-continuous">
-            <h2>🔮 Future Continuous</h2>
-            <div class="theory">
-                <div class="formula">
-                    <h3>Формула:</h3>
-                    <p>Все лица + will be + Ving</p>
+            <!-- 10. Future Continuous -->
+            <div class="tense-card tense-future-continuous">
+                <div class="card-header">
+                    <span class="card-icon">💚</span>
+                    <h2>Future Continuous</h2>
                 </div>
-                <div class="examples">
-                    <h3>Примеры:</h3>
-                    <p>✓ I will be working at 5 PM.</p>
-                </div>
-                <div class="keywords">
-                    <h3>Ключевые слова:</h3>
-                    <div class="keyword-list"><span class="keyword">at this time tomorrow</span><span class="keyword">at
-                            5 PM tomorrow</span><span class="keyword">this time next week</span></div>
+                <div class="card-content">
+                    <div class="formula">will be + Ving</div>
+                    <div class="examples">
+                        <h4>📌 5+ misol:</h4>
+                        <p>✅ I will be working at 5 PM.</p>
+                        <p>✅ They will be traveling tomorrow.</p>
+                        <p>✅ She will be sleeping when you arrive.</p>
+                        <p>✅ He will be waiting for us.</p>
+                        <p>✅ We will be having dinner at 8 PM.</p>
+                        <p>✅ The sun will be shining.</p>
+                    </div>
+                    <div class="keywords">
+                        <span>at this time tomorrow</span> <span>at 5 PM tomorrow</span>
+                        <span>this time next week</span>
+                    </div>
+                    <div class="self-test">
+                        <h4>📝 Testlar:</h4>
+                        <div class="question"><label>1. I _____ (work) at 5 PM tomorrow.</label><input type="text" class="answer-input" data-answer="will be working"><button class="show-answer">Javobni ko'rish</button><span class="answer-display"></span></div>
+                        <div class="question"><label>2. This time next week, we _____ (travel) to Paris.</label><input type="text" class="answer-input" data-answer="will be traveling"><button class="show-answer">Javobni ko'rish</button><span class="answer-display"></span></div>
+                        <div class="question"><label>3. She _____ (sleep) when you arrive.</label><input type="text" class="answer-input" data-answer="will be sleeping"><button class="show-answer">Javobni ko'rish</button><span class="answer-display"></span></div>
+                        <div class="question"><label>4. They _____ (have) dinner at 8 PM.</label><input type="text" class="answer-input" data-answer="will be having"><button class="show-answer">Javobni ko'rish</button><span class="answer-display"></span></div>
+                        <div class="question"><label>5. He _____ (wait) for us at the station.</label><input type="text" class="answer-input" data-answer="will be waiting"><button class="show-answer">Javobni ko'rish</button><span class="answer-display"></span></div>
+                    </div>
                 </div>
             </div>
-            <div class="test-block">
-                <h3>Проверьте себя:</h3>
-                <div class="question">
-                    <p>1. I [type here] (work) at 5 PM tomorrow.</p><input type="text" class="answer-input"
-                        placeholder="Введите ответ...">
-                </div>
-                <div class="question">
-                    <p>2. This time next week, we [type here] (travel) to Paris.</p><input type="text"
-                        class="answer-input" placeholder="Введите ответ...">
-                    <a href="check_box.html"><button class="check-btn">Check Answer</button></a>
-                </div>
-            </div>
-        </section>
 
-        <section class="tense-section" id="future-perfect">
-            <h2>🔮 Future Perfect</h2>
-            <div class="theory">
-                <div class="formula">
-                    <h3>Формула:</h3>
-                    <p>Все лица + will have + V3</p>
+            <!-- 11. Future Perfect -->
+            <div class="tense-card tense-future-perfect">
+                <div class="card-header">
+                    <span class="card-icon">💜</span>
+                    <h2>Future Perfect</h2>
                 </div>
-                <div class="examples">
-                    <h3>Примеры:</h3>
-                    <p>✓ I will have finished by 6 PM.</p>
-                </div>
-                <div class="keywords">
-                    <h3>Ключевые слова:</h3>
-                    <div class="keyword-list"><span class="keyword">by</span><span class="keyword">by the
-                            time</span><span class="keyword">before</span><span class="keyword">by then</span></div>
+                <div class="card-content">
+                    <div class="formula">will have + V3</div>
+                    <div class="examples">
+                        <h4>📌 5+ misol:</h4>
+                        <p>✅ I will have finished by 6 PM.</p>
+                        <p>✅ She will have left by then.</p>
+                        <p>✅ They will have completed the project.</p>
+                        <p>✅ He will have read all books.</p>
+                        <p>✅ We will have eaten by the time you come.</p>
+                        <p>✅ The movie will have started.</p>
+                    </div>
+                    <div class="keywords">
+                        <span>by</span> <span>by the time</span> <span>before</span> <span>by then</span>
+                        <span>by tomorrow</span>
+                    </div>
+                    <div class="self-test">
+                        <h4>📝 Testlar:</h4>
+                        <div class="question"><label>1. I _____ (finish) by 6 PM.</label><input type="text" class="answer-input" data-answer="will have finished"><button class="show-answer">Javobni ko'rish</button><span class="answer-display"></span></div>
+                        <div class="question"><label>2. She _____ (leave) by the time you arrive.</label><input type="text" class="answer-input" data-answer="will have left"><button class="show-answer">Javobni ko'rish</button><span class="answer-display"></span></div>
+                        <div class="question"><label>3. They _____ (complete) the project by Friday.</label><input type="text" class="answer-input" data-answer="will have completed"><button class="show-answer">Javobni ko'rish</button><span class="answer-display"></span></div>
+                        <div class="question"><label>4. He _____ (read) all the books by next month.</label><input type="text" class="answer-input" data-answer="will have read"><button class="show-answer">Javobni ko'rish</button><span class="answer-display"></span></div>
+                        <div class="question"><label>5. We _____ (eat) by the time you come.</label><input type="text" class="answer-input" data-answer="will have eaten"><button class="show-answer">Javobni ko'rish</button><span class="answer-display"></span></div>
+                    </div>
                 </div>
             </div>
-            <div class="test-block">
-                <h3>Проверьте себя:</h3>
-                <div class="question">
-                    <p>1. I [type here] (finish) by 6 PM.</p><input type="text" class="answer-input"
-                        placeholder="Введите ответ...">
-                </div>
-                <div class="question">
-                    <p>2. She [type here] (leave) by the time you arrive.</p><input type="text" class="answer-input"
-                        placeholder="Введите ответ...">
-                    <a href="check_box.html"><button class="check-btn">Check Answer</button></a>
-                </div>
-            </div>
-        </section>
 
-        <section class="tense-section" id="future-perfect-continuous">
-            <h2>🔮 Future Perfect Continuous</h2>
-            <div class="theory">
-                <div class="formula">
-                    <h3>Формула:</h3>
-                    <p>Все лица + will have been + Ving</p>
+            <!-- 12. Future Perfect Continuous -->
+            <div class="tense-card tense-future-perf-cont">
+                <div class="card-header">
+                    <span class="card-icon">🧡</span>
+                    <h2>Future Perfect Continuous</h2>
                 </div>
-                <div class="examples">
-                    <h3>Примеры:</h3>
-                    <p>✓ I will have been working for 5 years.</p>
-                </div>
-                <div class="keywords">
-                    <h3>Ключевые слова:</h3>
-                    <div class="keyword-list"><span class="keyword">by + время</span><span
-                            class="keyword">for</span><span class="keyword">by the time</span></div>
+                <div class="card-content">
+                    <div class="formula">will have been + Ving</div>
+                    <div class="examples">
+                        <h4>📌 5+ misol:</h4>
+                        <p>✅ I will have been working for 5 years.</p>
+                        <p>✅ She will have been living here since 2020.</p>
+                        <p>✅ They will have been studying for 3 hours.</p>
+                        <p>✅ He will have been driving for 12 hours.</p>
+                        <p>✅ We will have been waiting for 2 hours.</p>
+                        <p>✅ It will have been raining for a week.</p>
+                    </div>
+                    <div class="keywords">
+                        <span>by + time</span> <span>for</span> <span>by the time</span>
+                        <span>by next year</span>
+                    </div>
+                    <div class="self-test">
+                        <h4>📝 Testlar:</h4>
+                        <div class="question"><label>1. I _____ (work) for 5 years by next June.</label><input type="text" class="answer-input" data-answer="will have been working"><button class="show-answer">Javobni ko'rish</button><span class="answer-display"></span></div>
+                        <div class="question"><label>2. By 2025, she _____ (live) in New York for 10 years.</label><input type="text" class="answer-input" data-answer="will have been living"><button class="show-answer">Javobni ko'rish</button><span class="answer-display"></span></div>
+                        <div class="question"><label>3. They _____ (study) for 3 hours by the time we arrive.</label><input type="text" class="answer-input" data-answer="will have been studying"><button class="show-answer">Javobni ko'rish</button><span class="answer-display"></span></div>
+                        <div class="question"><label>4. He _____ (drive) for 12 hours by midnight.</label><input type="text" class="answer-input" data-answer="will have been driving"><button class="show-answer">Javobni ko'rish</button><span class="answer-display"></span></div>
+                        <div class="question"><label>5. We _____ (wait) for 2 hours by 5 PM.</label><input type="text" class="answer-input" data-answer="will have been waiting"><button class="show-answer">Javobni ko'rish</button><span class="answer-display"></span></div>
+                    </div>
                 </div>
             </div>
-            <div class="test-block">
-                <h3>Проверьте себя:</h3>
-                <div class="question">
-                    <p>1. I [type here] (work) for 5 years by next June.</p><input type="text" class="answer-input"
-                        placeholder="Введите ответ...">
+        </div>
+
+        <!-- VOCABULARY SECTION 1: Umumiy so'zlar -->
+        <div class="vocabulary-section" id="vocabulary">
+            <h2>📖 Vocabulary / Lug'at</h2>
+            <p>Eng ko'p ishlatiladigan inglizcha so'zlar</p>
+            
+            <div class="vocab-grid">
+                <div class="vocab-card"><h3>🔤 Fe'llar</h3><ul><li><strong>go</strong> - bormoq</li><li><strong>come</strong> - kelmoq</li><li><strong>eat</strong> - yemoq</li><li><strong>drink</strong> - ichmoq</li><li><strong>sleep</strong> - uxlamoq</li><li><strong>work</strong> - ishlamoq</li><li><strong>study</strong> - o'qimoq</li><li><strong>play</strong> - o'ynamoq</li><li><strong>read</strong> - o'qimoq</li><li><strong>write</strong> - yozmoq</li></ul></div>
+                <div class="vocab-card"><h3>🏠 Sifatlar</h3><ul><li><strong>good</strong> - yaxshi</li><li><strong>bad</strong> - yomon</li><li><strong>big</strong> - katta</li><li><strong>small</strong> - kichik</li><li><strong>happy</strong> - baxtli</li><li><strong>sad</strong> - qayg'uli</li><li><strong>fast</strong> - tez</li><li><strong>slow</strong> - sekin</li><li><strong>new</strong> - yangi</li><li><strong>old</strong> - eski</li></ul></div>
+                <div class="vocab-card"><h3>📅 Otlar</h3><ul><li><strong>day</strong> - kun</li><li><strong>night</strong> - tun</li><li><strong>week</strong> - hafta</li><li><strong>month</strong> - oy</li><li><strong>year</strong> - yil</li><li><strong>person</strong> - odam</li><li><strong>place</strong> - joy</li><li><strong>thing</strong> - narsa</li><li><strong>time</strong> - vaqt</li><li><strong>way</strong> - yo'l</li></ul></div>
+                <div class="vocab-card"><h3>🎯 Holatlar</h3><ul><li><strong>always</strong> - har doim</li><li><strong>usually</strong> - odatda</li><li><strong>often</strong> - tez-tez</li><li><strong>sometimes</strong> - ba'zida</li><li><strong>never</strong> - hech qachon</li><li><strong>today</strong> - bugun</li><li><strong>tomorrow</strong> - ertaga</li><li><strong>yesterday</strong> - kecha</li><li><strong>now</strong> - hozir</li><li><strong>then</strong> - keyin</li></ul></div>
+            </div>
+        </div>
+
+        <!-- VOCABULARY SECTION 2: In / On / At -->
+        <div class="vocabulary-section" id="prepositions">
+            <h2>📖 In / On / At - Predloglar</h2>
+            <div class="preposition-rules">
+                <div class="rule-card"><h3>🕐 IN</h3><ul><li>in January, in July</li><li>in 2020, in 1995</li><li>in the morning, in the evening</li><li>in summer, in winter</li><li>in Uzbekistan, in Tashkent</li></ul></div>
+                <div class="rule-card"><h3>📅 ON</h3><ul><li>on Monday, on Friday</li><li>on 15th June, on May 1st</li><li>on my birthday</li><li>on the table, on the wall</li><li>on the phone, on TV</li></ul></div>
+                <div class="rule-card"><h3>⏰ AT</h3><ul><li>at 5 PM, at 8:30</li><li>at Christmas, at Easter</li><li>at lunchtime</li><li>at night</li><li>at the bus stop</li></ul></div>
+            </div>
+            <div class="preposition-test"><h3>📝 In/On/At - 10 ta test</h3>
+                <div class="question"><p>1. I wake up _____ 7 AM.</p><input type="text" class="answer-input" data-answer="at"><button class="show-answer">Javobni ko'rish</button><span class="answer-display"></span></div>
+                <div class="question"><p>2. Let's meet _____ Monday.</p><input type="text" class="answer-input" data-answer="on"><button class="show-answer">Javobni ko'rish</button><span class="answer-display"></span></div>
+                <div class="question"><p>3. She was born _____ 1995.</p><input type="text" class="answer-input" data-answer="in"><button class="show-answer">Javobni ko'rish</button><span class="answer-display"></span></div>
+                <div class="question"><p>4. The book is _____ the table.</p><input type="text" class="answer-input" data-answer="on"><button class="show-answer">Javobni ko'rish</button><span class="answer-display"></span></div>
+                <div class="question"><p>5. We go to the beach _____ summer.</p><input type="text" class="answer-input" data-answer="in"><button class="show-answer">Javobni ko'rish</button><span class="answer-display"></span></div>
+                <div class="question"><p>6. He works _____ the hospital.</p><input type="text" class="answer-input" data-answer="in"><button class="show-answer">Javobni ko'rish</button><span class="answer-display"></span></div>
+                <div class="question"><p>7. The party is _____ Saturday evening.</p><input type="text" class="answer-input" data-answer="on"><button class="show-answer">Javobni ko'rish</button><span class="answer-display"></span></div>
+                <div class="question"><p>8. I'll call you _____ lunchtime.</p><input type="text" class="answer-input" data-answer="at"><button class="show-answer">Javobni ko'rish</button><span class="answer-display"></span></div>
+                <div class="question"><p>9. They arrived _____ the airport.</p><input type="text" class="answer-input" data-answer="at"><button class="show-answer">Javobni ko'rish</button><span class="answer-display"></span></div>
+                <div class="question"><p>10. I drink coffee _____ the morning.</p><input type="text" class="answer-input" data-answer="in"><button class="show-answer">Javobni ko'rish</button><span class="answer-display"></span></div>
+            </div>
+        </div>
+
+        <!-- YANGI SECTION: BARCHA PREDLOGLAR (All Prepositions) -->
+        <div class="vocabulary-section" id="all-prepositions">
+            <h2>📖 Ingliz tilidagi barcha predloglar / All Prepositions</h2>
+            <p>Eng muhim predloglar va ularga misollar</p>
+
+            <div class="all-prepositions-grid">
+                <div class="preposition-item">
+                    <h3>📍 ABOUT</h3>
+                    <p>📌 haqida, taxminan</p>
+                    <p>✅ I'm thinking <strong>about</strong> you.</p>
+                    <p>✅ Tell me <strong>about</strong> your day.</p>
                 </div>
-                <div class="question">
-                    <p>2. By 2025, she [type here] (live) in New York for 10 years.</p><input type="text"
-                        class="answer-input" placeholder="Введите ответ...">
-                    <a href="check_box.html"><button class="check-btn">Check Answer</button></a>
+                <div class="preposition-item">
+                    <h3>📍 ABOVE</h3>
+                    <p>📌 ustida, yuqorida</p>
+                    <p>✅ The sun is <strong>above</strong> the clouds.</p>
+                    <p>✅ Hang the picture <strong>above</strong> the sofa.</p>
+                </div>
+                <div class="preposition-item">
+                    <h3>📍 AFTER</h3>
+                    <p>📌 keyin</p>
+                    <p>✅ We'll eat <strong>after</strong> the movie.</p>
+                    <p>✅ He came <strong>after</strong> me.</p>
+                </div>
+                <div class="preposition-item">
+                    <h3>📍 ALONG</h3>
+                    <p>📌 bo'ylab</p>
+                    <p>✅ Walk <strong>along</strong> the river.</p>
+                    <p>✅ Trees grow <strong>along</strong> the road.</p>
+                </div>
+                <div class="preposition-item">
+                    <h3>📍 AROUND</h3>
+                    <p>📌 atrofida</p>
+                    <p>✅ We sat <strong>around</strong> the table.</p>
+                    <p>✅ He looked <strong>around</strong> the room.</p>
+                </div>
+                <div class="preposition-item">
+                    <h3>📍 AT</h3>
+                    <p>📌 da (joy/vaqt)</p>
+                    <p>✅ Meet me <strong>at</strong> the station.</p>
+                    <p>✅ The class starts <strong>at</strong> 9 AM.</p>
+                </div>
+                <div class="preposition-item">
+                    <h3>📍 BEFORE</h3>
+                    <p>📌 oldin</p>
+                    <p>✅ Wash your hands <strong>before</strong> eating.</p>
+                    <p>✅ He arrived <strong>before</strong> me.</p>
+                </div>
+                <div class="preposition-item">
+                    <h3>📍 BEHIND</h3>
+                    <p>📌 orqasida</p>
+                    <p>✅ The sun is <strong>behind</strong> the clouds.</p>
+                    <p>✅ She hid <strong>behind</strong> the door.</p>
+                </div>
+                <div class="preposition-item">
+                    <h3>📍 BELOW</h3>
+                    <p>📌 pastda</p>
+                    <p>✅ The temperature is <strong>below</strong> zero.</p>
+                    <p>✅ He lives <strong>below</strong> us.</p>
+                </div>
+                <div class="preposition-item">
+                    <h3>📍 BENEATH</h3>
+                    <p>📌 tagida</p>
+                    <p>✅ The cat is <strong>beneath</strong> the table.</p>
+                    <p>✅ He felt <strong>beneath</strong> her.</p>
+                </div>
+                <div class="preposition-item">
+                    <h3>📍 BESIDE</h3>
+                    <p>📌 yonida</p>
+                    <p>✅ Sit <strong>beside</strong> me.</p>
+                    <p>✅ The hotel is <strong>beside</strong> the beach.</p>
+                </div>
+                <div class="preposition-item">
+                    <h3>📍 BETWEEN</h3>
+                    <p>📌 orasida (2)</p>
+                    <p>✅ The ball is <strong>between</strong> the chairs.</p>
+                    <p>✅ Share <strong>between</strong> you two.</p>
+                </div>
+                <div class="preposition-item">
+                    <h3>📍 BY</h3>
+                    <p>📌 tomonidan, yonida</p>
+                    <p>✅ The book was written <strong>by</strong> him.</p>
+                    <p>✅ Stand <strong>by</strong> the window.</p>
+                </div>
+                <div class="preposition-item">
+                    <h3>📍 DOWN</h3>
+                    <p>📌 pastga</p>
+                    <p>✅ He fell <strong>down</strong> the stairs.</p>
+                    <p>✅ Walk <strong>down</strong> the street.</p>
+                </div>
+                <div class="preposition-item">
+                    <h3>📍 FOR</h3>
+                    <p>📌 uchun, davomida</p>
+                    <p>✅ This gift is <strong>for</strong> you.</p>
+                    <p>✅ I waited <strong>for</strong> an hour.</p>
+                </div>
+                <div class="preposition-item">
+                    <h3>📍 FROM</h3>
+                    <p>📌 dan</p>
+                    <p>✅ I'm <strong>from</strong> Uzbekistan.</p>
+                    <p>✅ The store is open <strong>from</strong> 9 to 5.</p>
+                </div>
+                <div class="preposition-item">
+                    <h3>📍 IN</h3>
+                    <p>📌 ichida</p>
+                    <p>✅ The keys are <strong>in</strong> my bag.</p>
+                    <p>✅ She lives <strong>in</strong> Tashkent.</p>
+                </div>
+                <div class="preposition-item">
+                    <h3>📍 INSIDE</h3>
+                    <p>📌 ichkarida</p>
+                    <p>✅ Go <strong>inside</strong> the house.</p>
+                    <p>✅ It's warm <strong>inside</strong>.</p>
+                </div>
+                <div class="preposition-item">
+                    <h3>📍 INTO</h3>
+                    <p>📌 ichiga</p>
+                    <p>✅ He jumped <strong>into</strong> the water.</p>
+                    <p>✅ She walked <strong>into</strong> the room.</p>
+                </div>
+                <div class="preposition-item">
+                    <h3>📍 LIKE</h3>
+                    <p>📌 kabi, o'xshash</p>
+                    <p>✅ She sings <strong>like</strong> an angel.</p>
+                    <p>✅ He looks <strong>like</strong> his father.</p>
+                </div>
+                <div class="preposition-item">
+                    <h3>📍 NEAR</h3>
+                    <p>📌 yaqin</p>
+                    <p>✅ The school is <strong>near</strong> my house.</p>
+                    <p>✅ Sit <strong>near</strong> me.</p>
+                </div>
+                <div class="preposition-item">
+                    <h3>📍 OFF</h3>
+                    <p>📌 dan, uzilib</p>
+                    <p>✅ He fell <strong>off</strong> the bike.</p>
+                    <p>✅ Take your feet <strong>off</strong> the table.</p>
+                </div>
+                <div class="preposition-item">
+                    <h3>📍 ON</h3>
+                    <p>📌 ustida</p>
+                    <p>✅ The book is <strong>on</strong> the table.</p>
+                    <p>✅ She is <strong>on</strong> the phone.</p>
+                </div>
+                <div class="preposition-item">
+                    <h3>📍 OUTSIDE</h3>
+                    <p>📌 tashqarida</p>
+                    <p>✅ Wait <strong>outside</strong> the door.</p>
+                    <p>✅ It's cold <strong>outside</strong>.</p>
+                </div>
+                <div class="preposition-item">
+                    <h3>📍 OVER</h3>
+                    <p>📌 ustidan</p>
+                    <p>✅ The plane flew <strong>over</strong> the city.</p>
+                    <p>✅ She jumped <strong>over</strong> the fence.</p>
+                </div>
+                <div class="preposition-item">
+                    <h3>📍 THROUGH</h3>
+                    <p>📌 orqali</p>
+                    <p>✅ He walked <strong>through</strong> the door.</p>
+                    <p>✅ The river flows <strong>through</strong> the city.</p>
+                </div>
+                <div class="preposition-item">
+                    <h3>📍 TO</h3>
+                    <p>📌 ga, tomonga</p>
+                    <p>✅ I'm going <strong>to</strong> school.</p>
+                    <p>✅ Give it <strong>to</strong> me.</p>
+                </div>
+                <div class="preposition-item">
+                    <h3>📍 UNDER</h3>
+                    <p>📌 ostida</p>
+                    <p>✅ The cat is <strong>under</strong> the bed.</p>
+                    <p>✅ He hid <strong>under</strong> the table.</p>
+                </div>
+                <div class="preposition-item">
+                    <h3>📍 UP</h3>
+                    <p>📌 yuqoriga</p>
+                    <p>✅ He climbed <strong>up</strong> the ladder.</p>
+                    <p>✅ Walk <strong>up</strong> the stairs.</p>
+                </div>
+                <div class="preposition-item">
+                    <h3>📍 WITHOUT</h3>
+                    <p>📌siz</p>
+                    <p>✅ He left <strong>without</strong> saying goodbye.</p>
+                    <p>✅ I can't live <strong>without</strong> you.</p>
                 </div>
             </div>
-        </section>
-        
-    </main>
+
+            <!-- Barcha predloglar uchun 10 ta test -->
+            <div class="preposition-test">
+                <h3>📝 Barcha predloglar bo'yicha 8 ta test / 8 Tests on All Prepositions</h3>
+                
+                <div class="question"><p>1. I'm thinking _____ you. (about / for / with)</p><input type="text" class="answer-input" data-answer="about"><button class="show-answer">Javobni ko'rish</button><span class="answer-display"></span></div>
+                <div class="question"><p>2. The sun is _____ the clouds. (above / under / behind)</p><input type="text" class="answer-input" data-answer="above"><button class="show-answer">Javobni ko'rish</button><span class="answer-display"></span></div>
+                <div class="question"><p>3. We'll eat _____ the movie. (before / after / during)</p><input type="text" class="answer-input" data-answer="after"><button class="show-answer">Javobni ko'rish</button><span class="answer-display"></span></div>
+                <div class="question"><p>4. The cat is _____ the table. (under / above / on)</p><input type="text" class="answer-input" data-answer="under"><button class="show-answer">Javobni ko'rish</button><span class="answer-display"></span></div>
+                <div class="question"><p>5. I'm going _____ school. (to / at / for)</p><input type="text" class="answer-input" data-answer="to"><button class="show-answer">Javobni ko'rish</button><span class="answer-display"></span></div>
+                <div class="question"><p>6. He left _____ saying goodbye. (without / with / for)</p><input type="text" class="answer-input" data-answer="without"><button class="show-answer">Javobni ko'rish</button><span class="answer-display"></span></div>
+                <div class="question"><p>7. I waited _____ an hour. (for / during / since)</p><input type="text" class="answer-input" data-answer="for"><button class="show-answer">Javobni ko'rish</button><span class="answer-display"></span></div>
+                <div class="question"><p>8. The book was written _____ him. (by / from / of)</p><input type="text" class="answer-input" data-answer="by"><button class="show-answer">Javobni ko'rish</button><span class="answer-display"></span></div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>© 2026 Ingliz tilidan baza olish / Basics of English | 12 tenses + All Prepositions</p>
+    </footer>
 
     <script>
-        const toggle = document.getElementById('navToggle');
-        const menu = document.getElementById('navMenu');
-        if (toggle && menu) {
-            toggle.addEventListener('click', () => {
-                menu.classList.toggle('show');
-            });
-        }
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({ behavior: 'smooth' });
-                    if (menu.classList.contains('show')) menu.classList.remove('show');
+        document.querySelectorAll('.show-answer').forEach(button => {
+            button.addEventListener('click', function() {
+                const questionDiv = this.parentElement;
+                const input = questionDiv.querySelector('.answer-input');
+                const answerDisplay = questionDiv.querySelector('.answer-display');
+                const correctAnswer = input.getAttribute('data-answer');
+                
+                if (answerDisplay) {
+                    answerDisplay.textContent = `✅ To'g'ri javob: ${correctAnswer}`;
+                    answerDisplay.style.color = '#2563eb';
+                    answerDisplay.style.fontWeight = 'bold';
+                    answerDisplay.style.marginLeft = '10px';
                 }
             });
         });
-
     </script>
 </body>
-
 </html>

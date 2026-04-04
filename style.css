@@ -5,287 +5,442 @@
 }
 
 body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
-    background: #f0f4f8;
-    color: #1a2a3a;
-    line-height: 1.5;
-    padding-top: 65px;
+    font-family: system-ui, 'Segoe UI', 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #f5f7fa 0%, #e4e8f0 100%);
+    color: #1a2c3e;
 }
 
+/* ========== NAVBAR ========== */
 .navbar {
-    position: fixed;
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    padding: 1rem 2rem;
+    position: sticky;
     top: 0;
-    left: 0;
-    width: 100%;
-    background: linear-gradient(135deg, #1e293b, #0f172a);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    z-index: 1000;
+    z-index: 100;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
 
 .nav-container {
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 0 auto;
-    padding: 0 16px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 60px;
+    flex-wrap: wrap;
+    gap: 1rem;
 }
 
-.nav-logo {
+.logo {
+    color: white;
     font-size: 1.3rem;
     font-weight: bold;
-    background: linear-gradient(135deg, #60a5fa, #a78bfa);
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
 }
 
-.nav-toggle {
-    display: none;
-    background: none;
-    border: none;
-    color: white;
-    font-size: 1.8rem;
-    cursor: pointer;
-}
-
-.nav-menu {
+.nav-links {
     display: flex;
+    gap: 1.5rem;
     list-style: none;
-    gap: 6px;
     flex-wrap: wrap;
 }
 
-.nav-menu li a {
-    color: #e2e8f0;
+.nav-links a {
+    color: white;
     text-decoration: none;
-    padding: 6px 12px;
-    border-radius: 20px;
-    font-size: 0.8rem;
     font-weight: 500;
-    transition: all 0.2s;
-    white-space: nowrap;
+    transition: 0.2s;
+    padding: 0.5rem 1rem;
+    border-radius: 2rem;
 }
 
-.nav-menu li a:hover {
-    background: #3b82f6;
-    color: white;
+.nav-links a:hover {
+    background: rgba(255,255,255,0.2);
 }
 
-@media (max-width: 768px) {
-    .nav-toggle {
-        display: block;
-    }
-
-    .nav-menu {
-        display: none;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        width: 100%;
-        background: #1e293b;
-        flex-direction: column;
-        padding: 16px;
-        gap: 8px;
-    }
-
-    .nav-menu.show {
-        display: flex;
-    }
-
-    .nav-menu li a {
-        display: block;
-        padding: 10px;
-        text-align: center;
-    }
-}
-
+/* ========== CONTAINER ========== */
 .container {
-    max-width: 1000px;
+    max-width: 1400px;
     margin: 0 auto;
-    padding: 0 16px 40px;
+    padding: 2rem 1.5rem;
 }
 
-.header {
+/* ========== HERO ========== */
+.hero {
     text-align: center;
-    margin-bottom: 30px;
-    padding: 25px 20px;
-    background: linear-gradient(135deg, #667eea, #764ba2);
-    border-radius: 20px;
+    margin-bottom: 2.5rem;
+}
+
+.hero h1 {
+    font-size: 2rem;
+    color: #2563eb;
+    text-shadow: 2px 2px 4px rgba(37,99,235,0.2);
+}
+
+.hero p {
+    color: #475569;
+}
+
+/* ========== GRID: 2 ta qatorda ========== */
+.tenses-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.8rem;
+    margin-bottom: 3rem;
+}
+
+/* ========== KARTA ========== */
+.tense-card {
+    background: white;
+    border-radius: 1.5rem;
+    overflow: hidden;
+    box-shadow: 0 10px 25px -5px rgba(0,0,0,0.08);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.tense-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 30px -12px rgba(0,0,0,0.15);
+}
+
+.card-header {
+    padding: 1rem 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
     color: white;
 }
 
-.header h1 {
+.card-icon {
     font-size: 1.8rem;
-    margin-bottom: 8px;
 }
 
-.header p {
-    font-size: 0.95rem;
-    opacity: 0.95;
+.card-header h2 {
+    font-size: 1.3rem;
 }
 
-.tense-section {
-    background: white;
-    border-radius: 20px;
-    margin-bottom: 25px;
-    padding: 20px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-    scroll-margin-top: 80px;
+.card-content {
+    padding: 1.2rem 1.5rem 1.8rem;
 }
 
-.tense-section h2 {
-    font-size: 1.4rem;
-    margin-bottom: 15px;
-    padding-bottom: 10px;
-    border-bottom: 3px solid #667eea;
-    display: inline-block;
+.formula {
+    background: #f1f5f9;
+    padding: 0.8rem;
+    border-radius: 1rem;
+    font-family: monospace;
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin: 1rem 0;
+    border-left: 4px solid;
 }
 
-.theory {
-    background: #f8f9ff;
-    border-radius: 16px;
-    padding: 16px;
-    margin-bottom: 20px;
-}
-
-.formula,
-.examples,
-.keywords {
-    margin-bottom: 12px;
-}
-
-.formula h3,
-.examples h3,
-.keywords h3 {
-    color: #667eea;
-    margin-bottom: 6px;
-    font-size: 0.9rem;
-}
-
-.formula p {
-    font-family: 'Courier New', monospace;
-    background: #eef2ff;
-    padding: 10px;
-    border-radius: 10px;
+.examples h4 {
+    margin-bottom: 0.5rem;
+    color: #1e3c72;
     font-size: 0.9rem;
 }
 
 .examples p {
-    padding: 4px 0 4px 20px;
-    color: #2d3748;
+    padding: 0.2rem 0;
     font-size: 0.9rem;
 }
 
-.keyword-list {
+.keywords {
+    margin: 1rem 0;
     display: flex;
     flex-wrap: wrap;
-    gap: 8px;
+    gap: 0.5rem;
 }
 
-.keyword {
-    background: #eef2ff;
-    color: #1e40af;
-    padding: 4px 12px;
-    border-radius: 20px;
-    font-size: 0.75rem;
+.keywords span {
+    background: #e2e8f0;
+    padding: 0.25rem 0.85rem;
+    border-radius: 30px;
+    font-size: 0.7rem;
     font-weight: 500;
 }
 
-.test-block h3 {
-    color: #2d3748;
-    margin-bottom: 15px;
+.self-test {
+    background: #f8fafc;
+    border-radius: 1.2rem;
+    padding: 1rem;
+    margin-top: 1rem;
+}
+
+.self-test h4 {
+    margin-bottom: 0.8rem;
+    color: #1e3c72;
+}
+
+/* ========== SAVOL QISMI ========== */
+.question {
+    margin: 1rem 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.question label, .question p {
+    font-size: 0.85rem;
+    font-weight: 500;
+    min-width: 180px;
+}
+
+.question input {
+    flex: 1;
+    min-width: 120px;
+    padding: 0.5rem 1rem;
+    border: 1px solid #cbd5e1;
+    border-radius: 2rem;
+    font-family: inherit;
+    font-size: 0.85rem;
+}
+
+.question input:focus {
+    outline: none;
+    border-color: #3b82f6;
+}
+
+.show-answer {
+    background: #3b82f6;
+    color: white;
+    border: none;
+    padding: 0.4rem 1rem;
+    border-radius: 2rem;
+    cursor: pointer;
+    font-size: 0.75rem;
+    transition: 0.2s;
+}
+
+.show-answer:hover {
+    background: #2563eb;
+}
+
+.answer-display {
+    font-size: 0.8rem;
+}
+
+/* ========== VOCABULARY SECTION ========== */
+.vocabulary-section {
+    background: white;
+    border-radius: 2rem;
+    padding: 2rem;
+    margin-top: 2rem;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.vocabulary-section h2 {
+    font-size: 1.6rem;
+    margin-bottom: 0.5rem;
+    color: #1e3c72;
+}
+
+.vocab-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    margin: 1.5rem 0;
+}
+
+.vocab-card {
+    background: #f1f5f9;
+    padding: 1.2rem;
+    border-radius: 1.2rem;
+}
+
+.vocab-card h3 {
+    margin-bottom: 0.8rem;
+    color: #1e3c72;
     font-size: 1rem;
 }
 
-.question {
-    background: #fff9e6;
-    border-left: 4px solid #fbbf24;
-    padding: 16px;
-    margin-bottom: 16px;
-    border-radius: 12px;
+.vocab-card ul {
+    list-style: none;
 }
 
-.question p {
-    font-family: 'Courier New', monospace;
-    font-size: 0.95rem;
-    margin-bottom: 12px;
-    font-weight: 500;
+.vocab-card li {
+    padding: 0.3rem 0;
+    font-size: 0.8rem;
 }
 
-.answer-input {
-    width: 100%;
-    padding: 12px 16px;
-    font-size: 0.95rem;
-    font-family: 'Courier New', monospace;
-    border: 2px solid #e2e8f0;
-    border-radius: 12px;
-    transition: all 0.2s;
-    background: white;
-    margin-bottom: 10px;
+/* ========== IN/ON/AT RULES ========== */
+.preposition-rules {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin: 1.5rem 0;
 }
 
-.answer-input:focus {
-    outline: none;
-    border-color: #667eea;
-    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+.rule-card {
+    background: #f1f5f9;
+    padding: 1.2rem;
+    border-radius: 1.2rem;
 }
 
-.check-btn {
-    background: linear-gradient(135deg, #10b981, #059669);
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    font-size: 0.85rem;
-    font-weight: 600;
-    border-radius: 30px;
-    cursor: pointer;
-    transition: all 0.2s;
-    width: auto;
-    min-width: 140px;
+.rule-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.8rem;
 }
 
-.check-btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+.rule-card ul {
+    list-style: none;
 }
 
-@media (max-width: 600px) {
-    body {
-        padding-top: 55px;
-    }
+.rule-card li {
+    padding: 0.3rem 0;
+    font-size: 0.8rem;
+}
 
-    .header h1 {
-        font-size: 1.3rem;
-    }
+.preposition-test {
+    background: #f8fafc;
+    padding: 1.5rem;
+    border-radius: 1.2rem;
+    margin-top: 1.5rem;
+}
 
-    .tense-section {
-        padding: 15px;
-    }
+.preposition-test h3 {
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
 
-    .tense-section h2 {
-        font-size: 1.2rem;
-    }
+/* ========== BARCHA PREDLOGLAR ========== */
+.all-prepositions-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1rem;
+    margin: 1.5rem 0;
+}
 
-    .question p {
-        font-size: 0.85rem;
-        word-break: break-word;
-    }
+.preposition-item {
+    background: #f1f5f9;
+    padding: 1rem;
+    border-radius: 1rem;
+    border-left: 4px solid #3b82f6;
+}
 
-    .answer-input {
-        padding: 10px 12px;
-        font-size: 0.85rem;
-    }
+.preposition-item h3 {
+    font-size: 1rem;
+    color: #1e3c72;
+    margin-bottom: 0.3rem;
+}
 
-    .check-btn {
-        padding: 8px 16px;
-        font-size: 0.8rem;
-        min-width: 120px;
-    }
+.preposition-item p {
+    font-size: 0.8rem;
+    margin: 0.2rem 0;
+}
 
-    .keyword {
-        font-size: 0.7rem;
-        padding: 3px 10px;
+.preposition-item p:first-of-type {
+    color: #64748b;
+    font-style: italic;
+}
+
+/* ========== FOOTER ========== */
+.footer {
+    text-align: center;
+    padding: 2rem;
+    background: #1e293b;
+    color: #94a3b8;
+    margin-top: 2rem;
+    font-size: 0.8rem;
+}
+
+/* ========== 12 TA RANG ========== */
+.tense-present-simple .card-header { background: #2563eb; }
+.tense-present-simple .formula { border-left-color: #2563eb; }
+
+.tense-present-continuous .card-header { background: #059669; }
+.tense-present-continuous .formula { border-left-color: #059669; }
+
+.tense-present-perfect .card-header { background: #d97706; }
+.tense-present-perfect .formula { border-left-color: #d97706; }
+
+.tense-present-perf-cont .card-header { background: #dc2626; }
+.tense-present-perf-cont .formula { border-left-color: #dc2626; }
+
+.tense-past-simple .card-header { background: #7c3aed; }
+.tense-past-simple .formula { border-left-color: #7c3aed; }
+
+.tense-past-continuous .card-header { background: #db2777; }
+.tense-past-continuous .formula { border-left-color: #db2777; }
+
+.tense-past-perfect .card-header { background: #0d9488; }
+.tense-past-perfect .formula { border-left-color: #0d9488; }
+
+.tense-past-perf-cont .card-header { background: #ea580c; }
+.tense-past-perf-cont .formula { border-left-color: #ea580c; }
+
+.tense-future-simple .card-header { background: #0891b2; }
+.tense-future-simple .formula { border-left-color: #0891b2; }
+
+.tense-future-continuous .card-header { background: #65a30d; }
+.tense-future-continuous .formula { border-left-color: #65a30d; }
+
+.tense-future-perfect .card-header { background: #c026d3; }
+.tense-future-perfect .formula { border-left-color: #c026d3; }
+
+.tense-future-perf-cont .card-header { background: #f97316; }
+.tense-future-perf-cont .formula { border-left-color: #f97316; }
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 1000px) {
+    .tenses-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .vocab-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-container {
+        flex-direction: column;
+    }
+    
+    .nav-links {
+        justify-content: center;
+        gap: 0.8rem;
+    }
+    
+    .hero h1 {
+        font-size: 1.5rem;
+    }
+    
+    .preposition-rules {
+        grid-template-columns: 1fr;
+    }
+    
+    .vocab-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .all-prepositions-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .question {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .question input {
+        width: 100%;
+    }
+    
+    .card-header h2 {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 1rem;
+    }
+    
+    .vocabulary-section {
+        padding: 1rem;
+    }
+    
+    .card-content {
+        padding: 1rem;
     }
 }

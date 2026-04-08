@@ -10,7 +10,6 @@ body {
     color: #1a2c3e;
 }
 
-/* ========== NAVBAR ========== */
 .navbar {
     background: linear-gradient(135deg, #1e3c72, #2a5298);
     padding: 1rem 2rem;
@@ -56,14 +55,12 @@ body {
     background: rgba(255,255,255,0.2);
 }
 
-/* ========== CONTAINER ========== */
 .container {
     max-width: 1400px;
     margin: 0 auto;
     padding: 2rem 1.5rem;
 }
 
-/* ========== HERO ========== */
 .hero {
     text-align: center;
     margin-bottom: 2.5rem;
@@ -79,7 +76,6 @@ body {
     color: #475569;
 }
 
-/* ========== GRID: 2 ta qatorda ========== */
 .tenses-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -170,7 +166,6 @@ body {
     color: #1e3c72;
 }
 
-/* ========== SAVOL QISMI ========== */
 .question {
     margin: 1rem 0;
     display: flex;
@@ -219,7 +214,6 @@ body {
     font-size: 0.8rem;
 }
 
-/* ========== VOCABULARY SECTION ========== */
 .vocabulary-section {
     background: white;
     border-radius: 2rem;
@@ -262,7 +256,6 @@ body {
     font-size: 0.8rem;
 }
 
-/* ========== IN/ON/AT RULES ========== */
 .preposition-rules {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -302,7 +295,6 @@ body {
     font-size: 1.1rem;
 }
 
-/* ========== BARCHA PREDLOGLAR ========== */
 .all-prepositions-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -333,7 +325,6 @@ body {
     font-style: italic;
 }
 
-/* ========== FOOTER ========== */
 .footer {
     text-align: center;
     padding: 2rem;
@@ -343,7 +334,6 @@ body {
     font-size: 0.8rem;
 }
 
-/* ========== 12 TA RANG ========== */
 .tense-present-simple .card-header { background: #2563eb; }
 .tense-present-simple .formula { border-left-color: #2563eb; }
 
@@ -380,7 +370,6 @@ body {
 .tense-future-perf-cont .card-header { background: #f97316; }
 .tense-future-perf-cont .formula { border-left-color: #f97316; }
 
-/* ========== RESPONSIVE ========== */
 @media (max-width: 1000px) {
     .tenses-grid {
         grid-template-columns: 1fr;

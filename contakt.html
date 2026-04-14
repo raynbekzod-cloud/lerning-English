@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontakt</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <span>📚</span>
+                <span>Ingliz tili</span>
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="index.html"><span>🏠</span> Bosh sahifa</a></li>
+                <li><a href="gramatika.html"><span>📚</span> Gramatika</a></li>
+                <li><a href="contakt.html"><span>📞</span> Kontakt</a></li>
+            </ul>
+        </div>
+    </nav>
+    <section class="vocabulary-section" id="contact">
+        <h2>📞 Biz bilan bog'lanish</h2>
+        <p>Savollaringizni yozib qoldiring, biz sizga javob beramiz</p>
+
+        <div class="contact-container">
+            <div class="contact-info">
+                <div class="info-card">
+                    <span class="info-icon">📧</span>
+                    <h3>Email</h3>
+                    <p>Bekzod@gmail.com</p>
+                    <p>buerda_siznin_reklamamgiz_bolishi_mumkin_edi@gmail.com</p>
+                </div>
+                <div class="info-card">
+                    <span class="info-icon">📱</span>
+                    <h3>Telegram</h3>
+                    <p>@english_basic</p>
+                    <p>@buerda_siznin_reklamamgiz_bolishi_mumkin_edi</p>
+                </div>
+                <div class="info-card">
+                    <span class="info-icon">📞</span>
+                    <h3>Telefon</h3>
+                    <p>+998 90 123 45 67</p>
+                    <p>buerda_siznin_reklamamgiz_bolishi_mumkin_edi</p>
+                </div>
+                <div class="info-card">
+                    <span class="info-icon">📍</span>
+                    <h3>Manzil</h3>
+                    <p>Toshkent sh., Chilonzor tumani</p>
+                    <p>Mustaqillik ko'chasi, 15-uy</p>
+                </div>
+            </div>
+
+            <div class="contact-form">
+                <h3>📝 Savol yozing</h3>
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label>Ismingiz</label>
+                        <input type="text" id="userName" placeholder="Ismingizni kiriting" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Email yoki Telegram</label>
+                        <input type="text" id="userContact" placeholder="@username yoki email" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Savolingiz</label>
+                        <textarea id="userMessage" rows="4" placeholder="Savolingizni yozing..." required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>Mavzu</label>
+                        <select id="userTopic">
+                            <option value="grammar">Grammar savoli</option>
+                            <option value="vocabulary">Vocabulary savoli</option>
+                            <option value="test">Testlar haqida</option>
+                            <option value="other">Boshqa savol</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="submit-btn">📨 Yuborish</button>
+                    <p id="formMessage" class="form-message"></p>
+                </form>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

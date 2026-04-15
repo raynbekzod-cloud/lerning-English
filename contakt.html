@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uz">
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kontakt</title>
-    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+    <title>Kontakt | Ingliz tili</title>
+    <link rel="stylesheet" href="contakt.css">
 </head>
 
 <body>
@@ -15,15 +15,16 @@
                 <span>📚</span>
                 <span>Ingliz tili</span>
             </div>
-
-            <ul class="nav-links">
-                <li><a href="index.html"><span>🏠</span> Bosh sahifa</a></li>
-                <li><a href="gramatika.html"><span>📚</span> Gramatika</a></li>
-                <li><a href="contakt.html"><span>📞</span> Kontakt</a></li>
+            <button class="menu-btn" id="menuBtn">☰</button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">🏠 Bosh sahifa</a></li>
+                <li><a href="gramatika.html">📚 Gramatika</a></li>
+                <li><a href="contakt.html">📞 Kontakt</a></li>
             </ul>
         </div>
     </nav>
-    <section class="vocabulary-section" id="contact">
+
+    <section class="contact-section">
         <h2>📞 Biz bilan bog'lanish</h2>
         <p>Savollaringizni yozib qoldiring, biz sizga javob beramiz</p>
 
@@ -32,26 +33,26 @@
                 <div class="info-card">
                     <span class="info-icon">📧</span>
                     <h3>Email</h3>
-                    <p>Bekzod@gmail.com</p>
-                    <p>buerda_siznin_reklamamgiz_bolishi_mumkin_edi@gmail.com</p>
+                    <p>english.basic@gmail.com</p>
+                    <p class="small-text">24/7 javob beramiz</p>
                 </div>
                 <div class="info-card">
                     <span class="info-icon">📱</span>
                     <h3>Telegram</h3>
                     <p>@english_basic</p>
-                    <p>@buerda_siznin_reklamamgiz_bolishi_mumkin_edi</p>
+                    <p class="small-text">Tezkor javob</p>
                 </div>
                 <div class="info-card">
                     <span class="info-icon">📞</span>
                     <h3>Telefon</h3>
                     <p>+998 90 123 45 67</p>
-                    <p>buerda_siznin_reklamamgiz_bolishi_mumkin_edi</p>
+                    <p class="small-text">09:00 - 18:00</p>
                 </div>
                 <div class="info-card">
                     <span class="info-icon">📍</span>
                     <h3>Manzil</h3>
-                    <p>Toshkent sh., Chilonzor tumani</p>
-                    <p>Mustaqillik ko'chasi, 15-uy</p>
+                    <p>Toshkent sh., Chilonzor</p>
+                    <p class="small-text">Mustaqillik ko'chasi, 15</p>
                 </div>
             </div>
 
@@ -59,25 +60,25 @@
                 <h3>📝 Savol yozing</h3>
                 <form id="contactForm">
                     <div class="form-group">
-                        <label>Ismingiz</label>
+                        <label>👤 Ismingiz</label>
                         <input type="text" id="userName" placeholder="Ismingizni kiriting" required>
                     </div>
                     <div class="form-group">
-                        <label>Email yoki Telegram</label>
+                        <label>📧 Email yoki Telegram</label>
                         <input type="text" id="userContact" placeholder="@username yoki email" required>
                     </div>
                     <div class="form-group">
-                        <label>Savolingiz</label>
-                        <textarea id="userMessage" rows="4" placeholder="Savolingizni yozing..." required></textarea>
+                        <label>📌 Mavzu</label>
+                        <select id="userTopic">
+                            <option value="grammar">📖 Grammar savoli</option>
+                            <option value="vocabulary">📚 Vocabulary savoli</option>
+                            <option value="test">✍️ Testlar haqida</option>
+                            <option value="other">💬 Boshqa savol</option>
+                        </select>
                     </div>
                     <div class="form-group">
-                        <label>Mavzu</label>
-                        <select id="userTopic">
-                            <option value="grammar">Grammar savoli</option>
-                            <option value="vocabulary">Vocabulary savoli</option>
-                            <option value="test">Testlar haqida</option>
-                            <option value="other">Boshqa savol</option>
-                        </select>
+                        <label>💬 Savolingiz</label>
+                        <textarea id="userMessage" rows="4" placeholder="Savolingizni yozing..." required></textarea>
                     </div>
                     <button type="submit" class="submit-btn">📨 Yuborish</button>
                     <p id="formMessage" class="form-message"></p>
@@ -85,6 +86,8 @@
             </div>
         </div>
     </section>
+
+
 </body>
 
 </html>

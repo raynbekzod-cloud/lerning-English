@@ -3,9 +3,9 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, viewport-fit=cover">
     <title>Ingliz tilidan baza olish / Basics of English</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="gramatika.css">
 </head>
 
 <body>
@@ -13,11 +13,6 @@
     <nav class="navbar">
         <div class="navbar">
             <div class="nav-container">
-                <div class="logo">
-                    <span>📚</span>
-                    <span>Ingliz tili</span>
-                </div>
-
                 <ul class="nav-links">
                     <li><a href="index.html"><span>🏠</span> Bosh sahifa</a></li>
                     <li><a href="gramatika.html"><span>📚</span> Gramatika</a></li>
@@ -27,6 +22,10 @@
         </div>
 
         <div class="nav-container">
+            <div class="logo">
+                <span>📚</span>
+                <span>Ingliz tili</span>
+            </div>
 
             <button class="nav-toggle" id="navToggle">☰</button>
 
@@ -35,7 +34,6 @@
                 <li><a href="#modals"><span>🎯</span> Modal</a></li>
                 <li><a href="#vocabulary"><span>📖</span> Vocabulary</a></li>
                 <li><a href="#prepositions"><span>📍</span> In/On/At</a></li>
-                <li><a href="#all-prepositions"><span>📚</span> Predloglar</a></li>
                 <li><a href="#articles"><span>📝</span> Artikllar</a></li>
                 <li><a href="#degrees"><span>📊</span> Darajalar</a></li>
                 <li><a href="#irregular"><span>⚠️</span> Noto'g'ri</a></li>
@@ -964,6 +962,7 @@
                 }
             });
         });
+
         // Answer buttons
         document.querySelectorAll('.show-answer').forEach(button => {
             button.addEventListener('click', function () {

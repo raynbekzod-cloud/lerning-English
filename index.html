@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uz">
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bosh sahifa</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+    <title>Ingliz tili | Bosh sahifa</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -15,20 +15,20 @@
                 <span>📚</span>
                 <span>Ingliz tili</span>
             </div>
-
-            <ul class="nav-links">
-                <li><a href="index.html"><span>🏠</span> Bosh sahifa</a></li>
-                <li><a href="gramatika.html"><span>📚</span> Gramatika</a></li>
-                <li><a href="contakt.html"><span>📞</span> Kontakt</a></li>
+            <button class="menu-btn" id="menuBtn">☰</button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">🏠 Bosh sahifa</a></li>
+                <li><a href="gramatika.html">📚 Gramatika</a></li>
+                <li><a href="contakt.html">📞 Kontakt</a></li>
             </ul>
         </div>
     </nav>
-    <section class="vocabulary-section" id="login">
+
+    <section class="vocabulary-section">
         <h2>🔐 Hisobingizga kiring</h2>
         <p>Saytga kiring yoki yangi hisob yarating</p>
 
         <div class="login-container">
-            <!-- Login Form -->
             <div class="login-form-card">
                 <div class="form-tabs">
                     <button class="tab-btn active" data-tab="login">📝 Kirish</button>
@@ -38,40 +38,31 @@
                 <!-- LOGIN FORM -->
                 <div id="loginForm" class="tab-content active">
                     <h3>Hisobingizga kiring</h3>
-                    <form id="loginUserForm">
+                    <form id="loginFormElement">
                         <div class="form-group">
-                            <label>👤 Username yoki Email</label>
-                            <input type="text" id="loginUsername" placeholder="username@example.com" required>
+                            <label>📱 Telefon raqam</label>
+                            <input type="tel" id="loginPhone" placeholder="+998 90 123 45 67" required>
                         </div>
                         <div class="form-group">
                             <label>🔒 Parol</label>
                             <input type="password" id="loginPassword" placeholder="Parolingiz" required>
-                            <span class="password-toggle" onclick="togglePassword('loginPassword')">👁️</span>
-                        </div>
-                        <div class="form-options">
-                            <label><input type="checkbox" id="rememberMe"> Eslab qol</label>
-                            <a href="#" id="forgotPassword">Parolni unutdingizmi?</a>
                         </div>
                         <button type="submit" class="submit-btn">🚪 Kirish</button>
                     </form>
-                    <div id="loginMessage" class="form-message"></div>
+                    <div id="loginMsg" class="form-message"></div>
                 </div>
 
                 <!-- SIGNUP FORM -->
                 <div id="signupForm" class="tab-content">
                     <h3>Yangi hisob yarating</h3>
-                    <form id="signupUserForm">
+                    <form id="signupFormElement">
                         <div class="form-group">
                             <label>👤 To'liq ism</label>
                             <input type="text" id="signupName" placeholder="Ismingiz" required>
                         </div>
                         <div class="form-group">
-                            <label>📧 Email</label>
-                            <input type="email" id="signupEmail" placeholder="email@example.com" required>
-                        </div>
-                        <div class="form-group">
-                            <label>👤 Username</label>
-                            <input type="text" id="signupUsername" placeholder="username" required>
+                            <label>📱 Telefon raqam</label>
+                            <input type="tel" id="signupPhone" placeholder="+998 90 123 45 67" required>
                         </div>
                         <div class="form-group">
                             <label>🔒 Parol</label>
@@ -84,15 +75,15 @@
                         </div>
                         <button type="submit" class="submit-btn">✅ Ro'yxatdan o'tish</button>
                     </form>
-                    <div id="signupMessage" class="form-message"></div>
+                    <div id="signupMsg" class="form-message"></div>
                 </div>
             </div>
 
-            <!-- User Info Card (Login bo'lgandan keyin) -->
+            <!-- User Info Card -->
             <div class="user-info-card" id="userInfoCard" style="display: none;">
                 <div class="user-avatar">👤</div>
                 <h3 id="userDisplayName">User</h3>
-                <p id="userDisplayEmail">user@example.com</p>
+                <p id="userDisplayPhone">+998 xx xxx xx xx</p>
                 <div class="user-stats">
                     <div class="stat">
                         <span class="stat-number" id="userProgress">0</span>
@@ -107,6 +98,27 @@
             </div>
         </div>
     </section>
+
+    <script>
+        // Mobil menyu
+        const menuBtn = document.getElementById('menuBtn');
+        const navLinks = document.getElementById('navLinks');
+        if (menuBtn) {
+            menuBtn.addEventListener('click', () => {
+                navLinks.classList.toggle('show');
+            });
+        }
+
+        // Tab o'zgartirish
+        document.querySelectorAll('.tab-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+                document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+                btn.classList.add('active');
+                document.getElementById(btn.dataset.tab + 'Form').classList.add('active');
+            });
+        });
+    </script>
 </body>
 
 </html>

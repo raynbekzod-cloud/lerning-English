@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="hama gramatikani.css">
+</head>
+
+<body>
+    <nav class="navbar">
+
+        <div class="nav-container">
+            <button class="nav-toggle" id="navToggle">☰</button>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="tens.html"> tenses</a></li>
+                <li><a href="modals.html">Modal</a></li>
+                <li><a href="vocabulary.html">Vocabulary</a></li>
+                <li><a href="prepositions.html"> In/On/At</a></li>
+                <li><a href="articles.html">Artikllar</a></li>
+                <li><a href="degrees.html">Darajalar</a></li>
+                <li><a href="irregular.html">Noto'g'ri</a></li>
+                <li><a href="voice.html">Voice</a></li>
+                <li><a href="reported.html">Reported</a></li>
+                <li><a href="tags.html">Tags</a></li>
+                <li><a href="conditionals.html">Shart</a></li>
+            </ul>
+
+            <div class="nav-search">
+                <input type="text" placeholder="Qidirish..." id="searchInput">
+                <button class="search-btn">🔍</button>
+            </div>
+        </div>
+    </nav>
+    <div class="preposition-test">
+        <h3>📝 Testlar</h3>
+        <div class="question">
+            <p>1. This car is _____ (fast) than that one.</p><input type="text" class="answer-input"
+                data-answer="faster"><button class="show-answer">Javob</button><span class="answer-display"></span>
+        </div>
+        <div class="question">
+            <p>2. She is _____ (beautiful) girl in the class.</p><input type="text" class="answer-input"
+                data-answer="the most beautiful"><button class="show-answer">Javob</button><span
+                class="answer-display"></span>
+        </div>
+        <div class="question">
+            <p>3. My house is _____ (big) than yours.</p><input type="text" class="answer-input"
+                data-answer="bigger"><button class="show-answer">Javob</button><span class="answer-display"></span>
+        </div>
+        <div class="question">
+            <p>4. Today is _____ (hot) day of the year.</p><input type="text" class="answer-input"
+                data-answer="the hottest"><button class="show-answer">Javob</button><span class="answer-display"></span>
+        </div>
+        <div class="question">
+            <p>5. This is _____ (interesting) book I've read.</p><input type="text" class="answer-input"
+                data-answer="the most interesting"><button class="show-answer">Javob</button><span
+                class="answer-display"></span>
+        </div>
+        <a href="degrees.html"><button type="button" class="submit-btn">organishga qaytish</button></a>
+
+    </div>
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>📚 Ingliz tili bazasi</h3>
+                <p>Ingliz tilini o'rganish uchun to'liq qo'llanma</p>
+            </div>
+            <div class="footer-section">
+                <h3>📖 Mavzular</h3>
+                <ul>
+                    <li>12 ingliz zamoni</li>
+                    <li>Modal fe'llar</li>
+                    <li>Predloglar</li>
+                    <li>Artikllar</li>
+                    <li>Active/Passive</li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>📞 Bog'lanish</h3>
+                <p>Email: info@ingliz-tili.uz</p>
+                <p>Telegram: @ingliz_tili</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 Ingliz tilidan baza olish | Barcha huquqlar himoyalangan</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const navToggle = document.getElementById('navToggle');
+        const navLinks = document.getElementById('navLinks');
+
+        if (navToggle) {
+            navToggle.addEventListener('click', () => {
+                navLinks.classList.toggle('show');
+            });
+        }
+
+        // Close menu when clicking a link (mobile)
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                if (window.innerWidth <= 768) {
+                    navLinks.classList.remove('show');
+                }
+            });
+        });
+
+        // Answer buttons
+        document.querySelectorAll('.show-answer').forEach(button => {
+            button.addEventListener('click', function () {
+                const questionDiv = this.parentElement;
+                const input = questionDiv.querySelector('.answer-input');
+                const answerDisplay = questionDiv.querySelector('.answer-display');
+                const correctAnswer = input.getAttribute('data-answer');
+
+                if (answerDisplay) {
+                    answerDisplay.textContent = `✅ Javob: ${correctAnswer}`;
+                    answerDisplay.style.color = '#2563eb';
+                    answerDisplay.style.fontWeight = 'bold';
+                    answerDisplay.style.marginLeft = '10px';
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

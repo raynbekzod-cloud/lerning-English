@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="hama gramatikani.css">
+</head>
+
+<body>
+    <nav class="navbar">
+
+        <div class="nav-container">
+            <button class="nav-toggle" id="navToggle">☰</button>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="tenses.html"> tenses</a></li>
+                <li><a href="modals.html">Modal</a></li>
+                <li><a href="vocabulary.html">Vocabulary</a></li>
+                <li><a href="prepositions.html"> In/On/At</a></li>
+                <li><a href="articles.html">Artikllar</a></li>
+                <li><a href="degrees.html">Darajalar</a></li>
+                <li><a href="irregular.html">Noto'g'ri</a></li>
+                <li><a href="voice.html">Voice</a></li>
+                <li><a href="reported.html">Reported</a></li>
+                <li><a href="tags.html">Tags</a></li>
+                <li><a href="conditionals.html">Shart</a></li>
+            </ul>
+
+            <div class="nav-search">
+                <input type="text" placeholder="Qidirish..." id="searchInput">
+                <button class="search-btn">🔍</button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container">
+        <section class="hero">
+            <h1>📚 12 ingliz zamoni</h1>
+            <p>Formula + Qachon ishlatilishi + Misollar + Testlar</p>
+        </section>
+        <section class="vocabulary-section" id="vocabulary">
+            <h2>📖 Vocabulary</h2>
+            <div class="vocab-grid">
+                <div class="vocab-card">
+                    <h3>Fe'llar</h3>
+                    <ul>
+                        <li>go - bormoq</li>
+                        <li>come - kelmoq</li>
+                        <li>eat - yemoq</li>
+                        <li>drink - ichmoq</li>
+                        <li>sleep - uxlamoq</li>
+                        <li>work - ishlamoq</li>
+                        <li>read - o'qimoq</li>
+                        <li>write - yozmoq</li>
+                    </ul>
+                </div>
+                <div class="vocab-card">
+                    <h3>Sifatlar</h3>
+                    <ul>
+                        <li>good - yaxshi</li>
+                        <li>bad - yomon</li>
+                        <li>big - katta</li>
+                        <li>small - kichik</li>
+                        <li>happy - baxtli</li>
+                        <li>sad - qayg'uli</li>
+                        <li>new - yangi</li>
+                        <li>old - eski</li>
+                    </ul>
+                </div>
+                <div class="vocab-card">
+                    <h3>Otlar</h3>
+                    <ul>
+                        <li>day - kun</li>
+                        <li>night - tun</li>
+                        <li>week - hafta</li>
+                        <li>month - oy</li>
+                        <li>year - yil</li>
+                        <li>person - odam</li>
+                        <li>time - vaqt</li>
+                        <li>way - yo'l</li>
+                    </ul>
+                </div>
+                <div class="vocab-card">
+                    <h3>Holatlar</h3>
+                    <ul>
+                        <li>always - har doim</li>
+                        <li>usually - odatda</li>
+                        <li>often - tez-tez</li>
+                        <li>sometimes - ba'zida</li>
+                        <li>never - hech qachon</li>
+                        <li>today - bugun</li>
+                        <li>tomorrow - ertaga</li>
+                        <li>yesterday - kecha</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>📚 Ingliz tili bazasi</h3>
+                <p>Ingliz tilini o'rganish uchun to'liq qo'llanma</p>
+            </div>
+            <div class="footer-section">
+                <h3>📖 Mavzular</h3>
+                <ul>
+                    <li>12 ingliz zamoni</li>
+                    <li>Modal fe'llar</li>
+                    <li>Predloglar</li>
+                    <li>Artikllar</li>
+                    <li>Active/Passive</li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>📞 Bog'lanish</h3>
+                <p>Email: info@ingliz-tili.uz</p>
+                <p>Telegram: @ingliz_tili</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 Ingliz tilidan baza olish | Barcha huquqlar himoyalangan</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const navToggle = document.getElementById('navToggle');
+        const navLinks = document.getElementById('navLinks');
+
+        if (navToggle) {
+            navToggle.addEventListener('click', () => {
+                navLinks.classList.toggle('show');
+            });
+        }
+
+        // Close menu when clicking a link (mobile)
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                if (window.innerWidth <= 768) {
+                    navLinks.classList.remove('show');
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

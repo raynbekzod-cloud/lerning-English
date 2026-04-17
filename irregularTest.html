@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="hama gramatikani.css">
+</head>
+
+<body>
+    <div class="preposition-test">
+        <h3>📝 Testlar</h3>
+        <div class="question">
+            <p>1. This is _____ (good) restaurant in town.</p><input type="text" class="answer-input"
+                data-answer="the best"><button class="show-answer">Javob</button><span class="answer-display"></span>
+        </div>
+        <div class="question">
+            <p>2. His health is getting _____ (bad).</p><input type="text" class="answer-input"
+                data-answer="worse"><button class="show-answer">Javob</button><span class="answer-display"></span>
+        </div>
+        <div class="question">
+            <p>3. I have _____ (little) money than you.</p><input type="text" class="answer-input"
+                data-answer="less"><button class="show-answer">Javob</button><span class="answer-display"></span>
+        </div>
+        <div class="question">
+            <p>4. She has _____ (much) experience than me.</p><input type="text" class="answer-input"
+                data-answer="more"><button class="show-answer">Javob</button><span class="answer-display"></span>
+        </div>
+        <div class="question">
+            <p>5. This is _____ (bad) day of my life.</p><input type="text" class="answer-input"
+                data-answer="the worst"><button class="show-answer">Javob</button><span class="answer-display"></span>
+        </div>
+    </div>
+    <a href="index.html"><button type="button" class="submit-btn">organishga qaytish</button></a>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>📚 Ingliz tili bazasi</h3>
+                <p>Ingliz tilini o'rganish uchun to'liq qo'llanma</p>
+            </div>
+            <div class="footer-section">
+                <h3>📖 Mavzular</h3>
+                <ul>
+                    <li>12 ingliz zamoni</li>
+                    <li>Modal fe'llar</li>
+                    <li>Predloglar</li>
+                    <li>Artikllar</li>
+                    <li>Active/Passive</li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>📞 Bog'lanish</h3>
+                <p>Email: info@ingliz-tili.uz</p>
+                <p>Telegram: @ingliz_tili</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 Ingliz tilidan baza olish | Barcha huquqlar himoyalangan</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const navToggle = document.getElementById('navToggle');
+        const navLinks = document.getElementById('navLinks');
+
+        if (navToggle) {
+            navToggle.addEventListener('click', () => {
+                navLinks.classList.toggle('show');
+            });
+        }
+
+        // Close menu when clicking a link (mobile)
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                if (window.innerWidth <= 768) {
+                    navLinks.classList.remove('show');
+                }
+            });
+        });
+
+        // Answer buttons
+        document.querySelectorAll('.show-answer').forEach(button => {
+            button.addEventListener('click', function () {
+                const questionDiv = this.parentElement;
+                const input = questionDiv.querySelector('.answer-input');
+                const answerDisplay = questionDiv.querySelector('.answer-display');
+                const correctAnswer = input.getAttribute('data-answer');
+
+                if (answerDisplay) {
+                    answerDisplay.textContent = `✅ Javob: ${correctAnswer}`;
+                    answerDisplay.style.color = '#2563eb';
+                    answerDisplay.style.fontWeight = 'bold';
+                    answerDisplay.style.marginLeft = '10px';
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

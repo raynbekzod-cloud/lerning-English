@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="hama gramatikani.css">
+</head>
+
+<body>
+    <nav class="navbar">
+
+        <div class="nav-container">
+            <button class="nav-toggle" id="navToggle">☰</button>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="tenses.html"> tenses</a></li>
+                <li><a href="modals.html">Modal</a></li>
+                <li><a href="vocabulary.html">Vocabulary</a></li>
+                <li><a href="prepositions.html"> In/On/At</a></li>
+                <li><a href="articles.html">Artikllar</a></li>
+                <li><a href="degrees.html">Darajalar</a></li>
+                <li><a href="irregular.html">Noto'g'ri</a></li>
+                <li><a href="voice.html">Voice</a></li>
+                <li><a href="reported.html">Reported</a></li>
+                <li><a href="tags.html">Tags</a></li>
+                <li><a href="conditionals.html">Shart</a></li>
+            </ul>
+
+            <div class="nav-search">
+                <input type="text" placeholder="Qidirish..." id="searchInput">
+                <button class="search-btn">🔍</button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container">
+        <section class="hero">
+            <h1>📚 12 ingliz zamoni</h1>
+            <p>Formula + Qachon ishlatilishi + Misollar + Testlar</p>
+        </section>
+        <section class="vocabulary-section" id="prepositions">
+            <h2>📖 In / On / At</h2>
+            <div class="preposition-rules">
+                <div class="rule-card">
+                    <h3>📍 IN</h3>
+                    <ul>
+                        <li>in Tashkent, in a room</li>
+                        <li>in January, in summer</li>
+                        <li>in the morning</li>
+                    </ul>
+                </div>
+                <div class="rule-card">
+                    <h3>📍 ON</h3>
+                    <ul>
+                        <li>on the table</li>
+                        <li>on Monday</li>
+                        <li>on my birthday</li>
+                    </ul>
+                </div>
+                <div class="rule-card">
+                    <h3>📍 AT</h3>
+                    <ul>
+                        <li>at the bus stop</li>
+                        <li>at 5 PM</li>
+                        <li>at night</li>
+                    </ul>
+                </div>
+            </div>
+            <a href="prepositionsTest.html"><button type="button" class="submit-btn">testlarga otish</button></a>
+            
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>📚 Ingliz tili bazasi</h3>
+                <p>Ingliz tilini o'rganish uchun to'liq qo'llanma</p>
+            </div>
+            <div class="footer-section">
+                <h3>📖 Mavzular</h3>
+                <ul>
+                    <li>12 ingliz zamoni</li>
+                    <li>Modal fe'llar</li>
+                    <li>Predloglar</li>
+                    <li>Artikllar</li>
+                    <li>Active/Passive</li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>📞 Bog'lanish</h3>
+                <p>Email: info@ingliz-tili.uz</p>
+                <p>Telegram: @ingliz_tili</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 Ingliz tilidan baza olish | Barcha huquqlar himoyalangan</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const navToggle = document.getElementById('navToggle');
+        const navLinks = document.getElementById('navLinks');
+
+        if (navToggle) {
+            navToggle.addEventListener('click', () => {
+                navLinks.classList.toggle('show');
+            });
+        }
+
+        // Close menu when clicking a link (mobile)
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                if (window.innerWidth <= 768) {
+                    navLinks.classList.remove('show');
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

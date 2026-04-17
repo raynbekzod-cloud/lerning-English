@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Til markazi</title>
+    <link rel="stylesheet" href="getinfo.css">
+</head>
+<body>
+    <div class="card">
+        <div class="hero">
+            <p>Ingliz tili va IELTS kurslari | Ro‘yxatdan o‘tish</p>
+        </div>
+
+        <div class="form-container">
+            <form id="infoForm">
+                <div class="form-grid">
+                    <!-- IKKI USTUN: FIO + YOSH -->
+                    <div class="row-2col">
+                        <div class="field-group">
+                            <label>F.I.O <span class="required">*</span></label>
+                            <input type="text" id="fullname" placeholder="Ism Familiya Sharifingiz" required>
+                        </div>
+                        <div class="field-group">
+                            <label>Yosh <span class="required">*</span></label>
+                            <input type="number" id="age" placeholder="Masalan: 22" min="12" max="100" required>
+                        </div>
+                    </div>
+
+                    <!-- Ingliz tili darajasi -->
+                    <div class="field-group">
+                        <label>Ingliz tili darajasi <span class="required">*</span></label>
+                        <select id="level" required>
+                            <option value="" disabled selected>— Darajani tanlang —</option>
+                            <option value="beginner">Beginner</option>
+                            <option value="elementary">Elementary</option>
+                            <option value="pre-intermediate">Pre-Intermediate</option>
+                            <option value="intermediate">Intermediate</option>
+                            <option value="upper-intermediate">Upper-Intermediate</option>
+                            <option value="advanced">Advanced</option>
+                        </select>
+                    </div>
+
+                    <!-- Qayerdan topgani (radio tugmalar) -->
+                    <div class="options-group">
+                        <div class="options-title">Bizni qayerdan topdingiz? <span class="required">*</span></div>
+                        <div class="radio-options">
+                            <label>
+                                <input type="radio" name="foundVia" value="instagram" required> Instagramdan
+                            </label>
+                            <label>
+                                <input type="radio" name="foundVia" value="friend"> Do‘stingizdan
+                            </label>
+                            <label>
+                                <input type="radio" name="foundVia" value="ad"> Reklamadan
+                            </label>
+                        </div>
+                    </div>
+
+                    <a href="tens.html">
+                        <div class="submit-area">
+                            <button type="button" class="btn-submit">Yuborish</button>
+                        </div>
+                    </a>
+                </div>
+            </form>
+
+            <div id="resultPanel" class="result-panel" style="display: none;">
+                <h3>Qabul qilindi!</h3>
+                <div id="resultContent"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        (function () {
+            const form = document.getElementById('infoForm');
+            const resultPanel = document.getElementById('resultPanel');
+            const resultContent = document.getElementById('resultContent');
+
+            // Ingliz til darajasi map (chiroyli ko'rinish uchun)
+            const levelMap = {
+                'beginner': 'Beginner',
+                'elementary': 'Elementary',
+                'pre-intermediate': 'Pre-Intermediate',
+                'intermediate': 'Intermediate',
+                'upper-intermediate': 'Upper-Intermediate',
+                'advanced': 'Advanced'
+            };
+
+            const courseMap = {
+                'pre-ielts': 'Pre-IELTS',
+                'ielts': 'IELTS'
+            };
+
+            const foundMap = {
+                'instagram': 'Instagramdan',
+                'friend': 'Do‘stingizdan',
+                'ad': 'Reklamadan'
+            };
+
+            function showResult(data) {
+                const levelText = levelMap[data.level] || data.level;
+                const courseText = courseMap[data.courseType] || data.courseType;
+                const foundText = foundMap[data.foundVia] || data.foundVia;
+
+                resultContent.innerHTML = `
+                    <p><strong>F.I.O:</strong> ${escapeHtml(data.fullname)}</p>
+                    <p><strong>Yosh:</strong> ${data.age}</p>
+                    <p><strong>Ingliz tili darajasi:</strong> ${levelText}</p>
+                    <p><strong>Kurs turi:</strong> ${courseText}</p>
+                    <p><strong>Bizni qayerdan topdingiz:</strong> ${foundText}</p>
+                `;
+                resultPanel.style.display = 'block';
+                // Natijani ko‘rish uchun silliq siljish
+                resultPanel.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            }
+
+            // XSS himoyasi uchun oddiy funksiya
+            function escapeHtml(str) {
+                if (!str) return '';
+                return str.replace(/[&<>]/g, function (m) {
+                    if (m === '&') return '&amp;';
+                    if (m === '<') return '&lt;';
+                    if (m === '>') return '&gt;';
+                    return m;
+                }).replace(/[\uD800-\uDBFF][\uDC00-\uDFFF]/g, function (c) {
+                    return c;
+                });
+            }
+
+            form.addEventListener('submit', function (e) {
+                e.preventDefault();
+
+                // Maydonlarni olish
+                const fullname = document.getElementById('fullname').value.trim();
+                const age = document.getElementById('age').value.trim();
+                const level = document.getElementById('level').value;
+                const courseType = document.getElementById('courseType').value;
+                const foundViaRadios = document.querySelectorAll('input[name="foundVia"]');
+                let foundVia = '';
+                for (let radio of foundViaRadios) {
+                    if (radio.checked) {
+                        foundVia = radio.value;
+                        break;
+                    }
+                }
+
+                // Validatsiya (HTML5 required dan tashqari qo'shimcha)
+                if (!fullname) {
+                    alert('Iltimos, F.I.O ni to‘ldiring.');
+                    return;
+                }
+                if (!age || isNaN(age) || age < 12 || age > 100) {
+                    alert('Yoshni to‘g‘ri kiriting (12-100 oralig‘ida).');
+                    return;
+                }
+                if (!level) {
+                    alert('Ingliz tili darajasini tanlang.');
+                    return;
+                }
+                if (!courseType) {
+                    alert('Kurs turini tanlang (Pre-IELTS yoki IELTS).');
+                    return;
+                }
+                if (!foundVia) {
+                    alert('Bizni qayerdan topganingizni belgilang.');
+                    return;
+                }
+
+                // Ma'lumotlarni yig'ish
+                const formData = {
+                    fullname: fullname,
+                    age: age,
+                    level: level,
+                    courseType: courseType,
+                    foundVia: foundVia
+                };
+
+                // Natijani ko'rsatish
+                showResult(formData);
+
+                // Agar kerak bo'lsa, konsolga ham chiqarish (ixtiyoriy)
+                console.log('Yuborilgan ma\'lumotlar:', formData);
+
+                // Istasangiz, shu yerda serverga POST so‘rov yuborishingiz mumkin.
+                // Masalan:
+                // fetch('/api/register', { method: 'POST', body: JSON.stringify(formData), ... })
+            });
+        })();
+    </script>
+</body>
+
+</html>

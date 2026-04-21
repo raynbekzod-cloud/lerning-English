@@ -5,13 +5,242 @@
 }
 
 body {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    min-height: 100vh;
     font-family: system-ui, 'Segoe UI', 'Roboto', sans-serif;
     background: linear-gradient(135deg, #f0f4f8 0%, #d9e2ec 100%);
     color: #1a2c3e;
     line-height: 1.5;
 }
+.sidebar {
+    width: 100%;
+    height: 100vh;
+    background: rgba(255, 255, 255, 0.96);
+    backdrop-filter: blur(10px);
+    border-right: 1px solid rgba(203, 213, 225, 0.5);
+    box-shadow: 8px 0 32px rgba(0, 0, 0, 0.03);
+    display: flex;
+    flex-direction: column;
+    position: sticky;
+    top: 0;
+    overflow-y: auto;
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+    margin-top: 2rem;
+}
 
-/* ========== NAVBAR ========== */
+.sidebar::-webkit-scrollbar {
+    width: 4px;
+}
+
+.sidebar::-webkit-scrollbar-track {
+    background: #f1f5f9;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 10px;
+}
+
+.brand h2 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, #6366f1, #8b5cf6);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    letter-spacing: -0.5px;
+}
+
+.brand p {
+    font-size: 0.75rem;
+    color: #94a3b8;
+    margin-top: 8px;
+    font-weight: 500;
+}
+
+.nav-menu {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding: 0 16px 32px 16px;
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 12px 18px;
+    margin: 1px 0;
+    border-radius: 16px;
+    background: transparent;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    font-weight: 500;
+    font-size: 0.95rem;
+    color: #475569;
+    text-decoration: none;
+    position: relative;
+}
+
+.nav-icon {
+    font-size: 1.3rem;
+    width: 32px;
+    text-align: center;
+}
+
+.nav-text {
+    flex: 1;
+}
+
+.nav-item:hover {
+    background: linear-gradient(95deg, #f1f5f9, #ffffff);
+    color: #4f46e5;
+    transform: translateX(4px);
+}
+
+.sidebar-footer {
+    padding: 20px 24px 28px;
+    font-size: 0.7rem;
+    color: #94a3b8;
+    text-align: center;
+    border-top: 1px solid #f1f5f9;
+}
+
+body:has(#tenses:target) .nav-item[href="#tenses"],
+body:has(#modal:target) .nav-item[href="#modal"],
+body:has(#vocabulary:target) .nav-item[href="#vocabulary"],
+body:has(#prepositions:target) .nav-item[href="#prepositions"],
+body:has(#articles:target) .nav-item[href="#articles"],
+body:has(#degrees:target) .nav-item[href="#degrees"],
+body:has(#irregular:target) .nav-item[href="#irregular"],
+body:has(#voice:target) .nav-item[href="#voice"],
+body:has(#reported:target) .nav-item[href="#reported"],
+body:has(#tags:target) .nav-item[href="#tags"],
+body:has(#conditionals:target) .nav-item[href="#conditionals"] {
+    background: linear-gradient(95deg, #eef2ff, #ffffff);
+    color: #4f46e5;
+    font-weight: 600;
+    box-shadow: 0 2px 8px rgba(79, 70, 229, 0.08);
+    border-left: 3px solid #4f46e5;
+}
+
+body:not(:has(:target)) .nav-item[href="#tenses"] {
+    background: linear-gradient(95deg, #eef2ff, #ffffff);
+    color: #4f46e5;
+    font-weight: 600;
+    border-left: 3px solid #4f46e5;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (min-width: 1440px) {
+    .sidebar {
+        width: 320px;
+    }
+
+    .page-title {
+        font-size: 2.6rem;
+    }
+
+    .main-content {
+        padding: 48px 56px;
+    }
+
+    .grammar-card {
+        padding: 24px 32px;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding: 12px;
+        border-right: none;
+        border-bottom: 1px solid #e2e8f0;
+        overflow-x: auto;
+    }
+
+    .brand {
+        display: none;
+    }
+
+    .nav-menu {
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding: 6px;
+        gap: 8px;
+    }
+
+    .nav-item {
+        width: auto;
+        padding: 8px 16px;
+        font-size: 0.8rem;
+    }
+
+    .nav-icon {
+        font-size: 1rem;
+        width: 24px;
+    }
+
+    .sidebar-footer {
+        display: none;
+    }
+
+    .main-content {
+        padding: 20px;
+    }
+
+    .page-card {
+        padding: 24px;
+    }
+
+    .page-title {
+        font-size: 1.8rem;
+    }
+
+    .grammar-card {
+        padding: 16px 20px;
+    }
+
+    .grammar-card h3 {
+        font-size: 1.1rem;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .sidebar {
+        width: 250px;
+    }
+
+    .main-content {
+        padding: 28px 32px;
+    }
+
+    .page-card {
+        padding: 32px 36px;
+    }
+}
 .navbar {
     background: linear-gradient(135deg, #1e3c72, #2a5298);
     padding: 0.2rem 1.5rem;
@@ -126,16 +355,15 @@ body {
     background: #d97706;
 }
 
-/* ========== CONTAINER ========== */
 .container {
-    max-width: 1400px;
-    margin: 0 auto;
+    flex: 1;
+    max-width: 70%;
+    margin: 0;
     padding: 2rem 1.5rem;
 }
 
-/* ========== HERO ========== */
 .hero {
-    text-align: center;
+    text-align: right;
     margin-bottom: 2.5rem;
     padding: 2rem;
     background: linear-gradient(135deg, #2563eb10, #1e3c7210);
@@ -153,7 +381,6 @@ body {
     color: #475569;
 }
 
-/* ========== TENSES GRID ========== */
 .tenses-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -219,7 +446,6 @@ body {
     font-size: 0.95rem;
 }
 
-/* Submit Button */
 .submit-btn {
     width: 100%;
     padding: 14px;
@@ -238,7 +464,6 @@ body {
     transform: scale(0.97);
 }
 
-/* ========== SELF TEST ========== */
 .self-test {
     background: #f8fafc;
     border-radius: 1.2rem;
@@ -302,7 +527,6 @@ body {
     font-weight: 500;
 }
 
-/* ========== VOCABULARY SECTION ========== */
 .vocabulary-section {
     background: white;
     border-radius: 2rem;
@@ -327,7 +551,6 @@ body {
     text-align: center;
 }
 
-/* ========== VOCAB GRID ========== */
 .vocab-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -356,7 +579,6 @@ body {
     font-size: 0.85rem;
 }
 
-/* ========== PREPOSITION RULES ========== */
 .preposition-rules {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -384,7 +606,6 @@ body {
     font-size: 0.85rem;
 }
 
-/* ========== IRREGULAR TABLE ========== */
 .irregular-table {
     display: flex;
     flex-wrap: wrap;
@@ -403,7 +624,6 @@ body {
     font-weight: bold;
 }
 
-/* ========== CONDITIONALS GRID ========== */
 .conditionals-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -433,7 +653,6 @@ body {
     margin-top: 0.5rem;
 }
 
-/* ========== PREPOSITION TEST ========== */
 .preposition-test {
     background: #f8fafc;
     padding: 1.5rem;
@@ -446,7 +665,6 @@ body {
     font-size: 1.1rem;
 }
 
-/* ========== TENSE COLORS ========== */
 .tense-1 .card-header {
     background: #2563eb;
 }
@@ -543,11 +761,12 @@ body {
     border-left-color: #f97316;
 }
 
-/* ========== FOOTER ========== */
 .footer {
-    background: #1e293b;
-    color: #94a3b8;
-    margin-top: 3rem;
+    background: linear-gradient(135deg, #0f172a, #1e293b);
+    color: #e2e8f0;
+    margin: 3rem 0 0 auto;
+    width: 75%;
+    border-top: 2px solid #3b82f6;
 }
 
 .footer-content {
@@ -560,8 +779,21 @@ body {
 }
 
 .footer-section h3 {
-    color: white;
+    color: #f8fafc;
     font-size: 1.1rem;
+}
+
+.footer-section p,
+.footer-section li {
+    color: #cbd5e1;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 1rem;
+    border-top: 1px solid #334155;
+    font-size: 0.75rem;
+    color: #94a3b8;
     margin-bottom: 1rem;
 }
 
@@ -585,7 +817,6 @@ body {
     border-top: 1px solid #334155;
     font-size: 0.75rem;
 }
-    /* ========== RESPONSIVE (MOBIL) ========== */
 
 @media (max-width: 1000px) {
     .tenses-grid {

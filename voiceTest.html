@@ -20,7 +20,7 @@
         <a href="vocabulary.html" class="nav-item"><span class="nav-icon"></span><span class="nav-text">Vocabulary</span></a>
         <a href="prepositions.html" class="nav-item"><span class="nav-icon"></span><span class="nav-text">In/On/At</span></a>
         <a href="articles.html" class="nav-item"><span class="nav-icon"></span><span class="nav-text">Artikllar</span></a>
-        <a href="degrees.html" class="nav-item"><span class="nav-icon"></span><span class="nav-text">Darajalar</span></a>
+        <a href="degrees.htm    l" class="nav-item"><span class="nav-icon"></span><span class="nav-text">Darajalar</span></a>
         <a href="irregular.html" class="nav-item"><span class="nav-icon"></span><span class="nav-text">Noto'g'ri Fe'llar</span></a>
         <a href="voice.html" class="nav-item"><span class="nav-icon"></span><span class="nav-text">Voice</span></a>
         <a href="reported.html" class="nav-item"><span class="nav-icon"></span><span class="nav-text">Reported Speech</span></a>
@@ -29,35 +29,33 @@
     </div>
     </aside>
     <main class="container">
-        <section class="hero">
-            <h1>Modal Fe'llar Testi</h1>
-            <p>Modal fe'llar bo'yicha bilimlaringizni sinab ko'ring</p>
-        </section>
-    <div class="preposition-test">
-        <h3>Testlar</h3>
-        <div class="question">
-            <p>1. I _____ swim when I was five.</p><input type="text" class="answer-input" data-answer="could"><button
-                class="show-answer">Javob</button><span class="answer-display"></span>
-        </div>
-        <div class="question">
-            <p>2. You _____ eat in the library. (taqiq)</p><input type="text" class="answer-input"
-                data-answer="mustn't"><button class="show-answer">Javob</button><span class="answer-display"></span>
-        </div>
-        <div class="question">
-            <p>3. _____ you help me?</p><input type="text" class="answer-input" data-answer="Could"><button
-                class="show-answer">Javob</button><span class="answer-display"></span>
-        </div>
-        <div class="question">
-            <p>4. You _____ see a doctor. (maslahat)</p><input type="text" class="answer-input"
-                data-answer="should"><button class="show-answer">Javob</button><span class="answer-display"></span>
-        </div>
-        <div class="question">
-            <p>5. It _____ rain later, but I'm not sure.</p><input type="text" class="answer-input"
-                data-answer="might"><button class="show-answer">Javob</button><span class="answer-display"></span>
-        </div>
-    </div>
-            <a href="modal.html"><button type="button" class="submit-btn">organishga qaytish</button></a>
-
+         <div class="preposition-test">
+                <h3>Testlar</h3>
+                <div class="question">
+                    <p>1. I write a book. → A book _____ by me.</p><input type="text" class="answer-input"
+                        data-answer="is written"><button class="show-answer">Javob</button><span
+                        class="answer-display"></span>
+                </div>
+                <div class="question">
+                    <p>2. She ate an apple. → An apple _____ by her.</p><input type="text" class="answer-input"
+                        data-answer="was eaten"><button class="show-answer">Javob</button><span
+                        class="answer-display"></span>
+                </div>
+                <div class="question">
+                    <p>3. They will build a house. → A house _____ built.</p><input type="text" class="answer-input"
+                        data-answer="will be"><button class="show-answer">Javob</button><span
+                        class="answer-display"></span>
+                </div>
+                <div class="question">
+                    <p>4. He helps me. → I _____ helped by him.</p><input type="text" class="answer-input"
+                        data-answer="am"><button class="show-answer">Javob</button><span class="answer-display"></span>
+                </div>
+                <div class="question">
+                    <p>5. She loved him. → He _____ loved by her.</p><input type="text" class="answer-input"
+                        data-answer="was"><button class="show-answer">Javob</button><span class="answer-display"></span>
+                </div>
+            </div>
+        <a href="./voice.html"><button type="button" class="submit-btn">organishga qaytish</button></a>
     </main>
 
     <footer class="footer">
@@ -86,7 +84,6 @@
             <p>© 2026 Ingliz tilidan baza olish | Barcha huquqlar himoyalangan</p>
         </div>
     </footer>
-
     <script>
         // Mobile menu toggle
         const navToggle = document.getElementById('navToggle');
@@ -116,7 +113,7 @@
                 const correctAnswer = input.getAttribute('data-answer');
 
                 if (answerDisplay) {
-                    answerDisplay.textContent = `Javob: ${correctAnswer}`;
+                    answerDisplay.textContent = `✅ Javob: ${correctAnswer}`;
                     answerDisplay.style.color = '#2563eb';
                     answerDisplay.style.fontWeight = 'bold';
                     answerDisplay.style.marginLeft = '10px';

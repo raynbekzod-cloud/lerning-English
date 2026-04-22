@@ -8,13 +8,14 @@ body {
     display: flex;
     flex-wrap: wrap;
     align-items: flex-start;
-    min-height: 100vh;
+    height: 100vh;
     font-family: system-ui, 'Segoe UI', 'Roboto', sans-serif;
     background: linear-gradient(135deg, #f0f4f8 0%, #d9e2ec 100%);
     color: #1a2c3e;
     line-height: 1.5;
 }
 .sidebar {
+    position: fixed;
     width: 100%;
     height: 100vh;
     background: rgba(255, 255, 255, 0.96);
@@ -23,12 +24,10 @@ body {
     box-shadow: 8px 0 32px rgba(0, 0, 0, 0.03);
     display: flex;
     flex-direction: column;
-    position: sticky;
     top: 0;
     overflow-y: auto;
     transition: all 0.3s ease;
     flex-shrink: 0;
-    margin-top: 2rem;
 }
 
 .sidebar::-webkit-scrollbar {
@@ -358,12 +357,11 @@ body:not(:has(:target)) .nav-item[href="#tenses"] {
 .container {
     flex: 1;
     max-width: 70%;
-    margin: 0;
+    margin-left: 30%;
     padding: 2rem 1.5rem;
 }
 
-.hero {
-    text-align: right;
+.hero { 
     margin-bottom: 2.5rem;
     padding: 2rem;
     background: linear-gradient(135deg, #2563eb10, #1e3c7210);
@@ -375,7 +373,7 @@ body:not(:has(:target)) .nav-item[href="#tenses"] {
     color: #2563eb;
     margin-bottom: 0.5rem;
 }
-
+oqigani onasini ami
 .hero p {
     font-size: 1.1rem;
     color: #475569;
@@ -478,53 +476,73 @@ body:not(:has(:target)) .nav-item[href="#tenses"] {
 }
 
 .question {
-    margin: 0.8rem 0;
+    background: white;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    margin: 1rem 0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    border-left: 4px solid #3b82f6;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    gap: 0.5rem;
+    gap: 1rem;
+    transition: all 0.3s ease;
 }
 
-.question p,
-.question label {
-    font-size: 0.9rem;
-    font-weight: 500;
-    min-width: 180px;
+.question:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.question p {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #374151;
+    flex: 1;
+    min-width: 200px;
 }
 
 .question input {
-    flex: 1;
-    min-width: 120px;
-    padding: 0.5rem 1rem;
-    border: 1px solid #cbd5e1;
-    border-radius: 2rem;
-    font-family: inherit;
-    font-size: 0.85rem;
+    padding: 0.75rem 1rem;
+    border: 2px solid #d1d5db;
+    border-radius: 0.5rem;
+    font-size: 0.9rem;
+    transition: border-color 0.3s;
+    min-width: 150px;
 }
 
 .question input:focus {
     outline: none;
     border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
 }
 
 .show-answer {
-    background: #3b82f6;
+    background: linear-gradient(135deg, #3b82f6, #1d4ed8);
     color: white;
     border: none;
-    padding: 0.4rem 1rem;
-    border-radius: 2rem;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0;
     cursor: pointer;
-    font-size: 0.75rem;
-    transition: 0.2s;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
 }
 
 .show-answer:hover {
-    background: #2563eb;
+    background: linear-gradient(135deg, #1d4ed8, #1e40af);
+    transform: scale(1.05);
 }
 
 .answer-display {
-    font-size: 0.85rem;
-    font-weight: 500;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #059669;
+    margin-left: 1rem;
+    padding: 0.5rem;
+    background: #ecfdf5;
+    border-radius: px;
+    border: none;
 }
 
 .vocabulary-section {
@@ -654,15 +672,20 @@ body:not(:has(:target)) .nav-item[href="#tenses"] {
 }
 
 .preposition-test {
-    background: #f8fafc;
-    padding: 1.5rem;
-    border-radius: 1.2rem;
-    margin-top: 1.5rem;
+    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+    padding: 2rem;
+    border-radius: 1.5rem;
+    margin: 2rem 0;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    border: 1px solid #cbd5e1;
 }
 
 .preposition-test h3 {
-    margin-bottom: 1rem;
-    font-size: 1.1rem;
+    font-size: 1.5rem;
+    color: #1e3c72;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    font-weight: 700;
 }
 
 .tense-1 .card-header {
@@ -765,7 +788,7 @@ body:not(:has(:target)) .nav-item[href="#tenses"] {
     background: linear-gradient(135deg, #0f172a, #1e293b);
     color: #e2e8f0;
     margin: 3rem 0 0 auto;
-    width: 75%;
+    width: 78%;
     border-top: 2px solid #3b82f6;
 }
 

@@ -73,6 +73,7 @@ body {
 }
 
 .brand h2 {
+    text-align: center;
     font-size: 1.8rem;
     font-weight: 700;
     background: linear-gradient(135deg, #6366f1, #8b5cf6);
@@ -83,6 +84,7 @@ body {
 }
 
 .brand p {
+    text-align: center;
     font-size: 0.75rem;
     color: #94a3b8;
     margin-top: 8px;
@@ -174,126 +176,7 @@ body:not(:has(:target)) .nav-item[href="#tenses"] {
     }
 }
 
-@media (min-width: 1440px) {
-    :root {
-        --sidebar-width: 320px;
-    }
 
-    .sidebar {
-        width: var(--sidebar-width);
-    }
-
-    .page-title {
-        font-size: 2.6rem;
-    }
-
-    .main-content {
-        padding: 48px 56px;
-    }
-
-    .grammar-card {
-        padding: 24px 32px;
-    }
-}
-
-@media (max-width: 768px) {
-    body {
-        flex-direction: column;
-    }
-
-    .sidebar {
-        width: 100%;
-        height: auto;
-        position: relative;
-        flex-direction: column;
-        padding: 10px 12px;
-        border-right: none;
-        border-bottom: 1px solid #e2e8f0;
-        overflow-x: hidden;
-    }
-
-    .sidebar-top {
-        padding: 8px 6px 10px;
-    }
-
-    .brand {
-        display: block;
-    }
-
-    .sidebar .nav-toggle {
-        display: inline-flex;
-    }
-
-    .sidebar .nav-links {
-        display: none;
-        width: 100%;
-        flex-direction: column;
-        padding: 6px 2px 10px;
-        gap: 8px;
-    }
-
-    .sidebar .nav-links.show {
-        display: flex;
-    }
-
-    .nav-menu {
-        padding: 6px 2px 10px;
-        gap: 8px;
-    }
-
-    .nav-item {
-        width: 100%;
-        padding: 10px 14px;
-        font-size: 0.95rem;
-        transform: none;
-    }
-
-    .nav-item:hover {
-        transform: none;
-    }
-
-    .sidebar-footer {
-        display: none;
-    }
-
-    .main-content {
-        padding: 20px;
-    }
-
-    .page-card {
-        padding: 24px;
-    }
-
-    .page-title {
-        font-size: 1.8rem;
-    }
-
-    .grammar-card {
-        padding: 16px 20px;
-    }
-
-    .grammar-card h3 {
-        font-size: 1.1rem;
-    }
-}
-
-@media (min-width: 769px) and (max-width: 1024px) {
-    :root {
-        --sidebar-width: 250px;
-    }
-
-    .sidebar {
-        width: var(--sidebar-width);
-    }
-
-    .main-content {
-        padding: 28px 32px;
-    }
-
-    .page-card {
-        padding: 32px 36px;
-    }
-}
 .navbar {
     background: linear-gradient(135deg, #1e3c72, #2a5298);
     padding: 0.2rem 1.5rem;
@@ -1286,5 +1169,125 @@ body:not(:has(:target)) .nav-item[href="#tenses"] {
     .nav-links {
         max-height: 70vh;
         overflow-y: auto;
+    }
+}
+@media (min-width: 1440px) {
+    :root {
+        --sidebar-width: 320px;
+    }
+
+    .sidebar {
+        width: var(--sidebar-width);
+    }
+
+    .page-title {
+        font-size: 2.6rem;
+    }
+
+    .main-content {
+        padding: 48px 56px;
+    }
+
+    .grammar-card {
+        padding: 24px 32px;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+        flex-direction: column;
+        padding: 10px 12px;
+        border-right: none;
+        border-bottom: 1px solid #e2e8f0;
+        overflow-x: hidden;
+    }
+
+    .sidebar-top {
+        padding: 8px 6px 10px;
+    }
+
+    .brand {
+        display: block;
+    }
+
+    .sidebar .nav-toggle {
+        display: inline-flex;
+    }
+
+    .sidebar .nav-links {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        padding: 6px 2px 10px;
+        gap: 8px;
+    }
+
+    .sidebar .nav-links.show {
+        display: flex;
+    }
+
+    .nav-menu {
+        padding: 6px 2px 10px;
+        gap: 8px;
+    }
+
+    .nav-item {
+        width: 100%;
+        padding: 10px 14px;
+        font-size: 0.95rem;
+        transform: none;
+    }
+
+    .nav-item:hover {
+        transform: none;
+    }
+
+    .sidebar-footer {
+        display: none;
+    }
+
+    .main-content {
+        padding: 20px;
+    }
+
+    .page-card {
+        padding: 24px;
+    }
+
+    .page-title {
+        font-size: 1.8rem;
+    }
+
+    .grammar-card {
+        padding: 16px 20px;
+    }
+
+    .grammar-card h3 {
+        font-size: 1.1rem;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    :root {
+        --sidebar-width: 250px;
+    }
+
+    .sidebar {
+        width: var(--sidebar-width);
+    }
+
+    .main-content {
+        padding: 28px 32px;
+    }
+
+    .page-card {
+        padding: 32px 36px;
     }
 }

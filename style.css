@@ -113,64 +113,103 @@ body {
     width: 100%;
 }
 
-.user-info-card {
+/* Flip Card Styles */
+.flip-form-card {
+    background-color: transparent;
+    perspective: 1000px;
+    height: 480px;
+}
+
+.flip-form-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
     text-align: center;
-    padding: 0;
+    transition: transform 0.7s ease-in-out;
+    transform-style: preserve-3d;
 }
 
-.form-tabs {
+.flip-form-front, .flip-form-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-radius: 20px;
+    padding: 24px;
+    background: white;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
     display: flex;
-    gap: 12px;
-    margin-bottom: 24px;
-    background: #f5f5f5;
-    padding: 6px;
-    border-radius: 50px;
+    flex-direction: column;
+    box-sizing: border-box;
 }
 
-.tab-btn {
+.flip-form-front .form-content,
+.flip-form-back .form-content {
     flex: 1;
-    padding: 12px;
-    background: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.flip-form-front form,
+.flip-form-back form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.flip-form-back {
+    transform: rotateY(180deg);
+}
+
+.form-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.form-header h3 {
+    color: #333;
+    margin: 0;
+    font-size: 18px;
+}
+
+.flip-toggle-btn {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
     border: none;
-    font-size: 15px;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 12px;
     font-weight: 600;
     cursor: pointer;
-    color: #666;
-    border-radius: 40px;
     transition: all 0.3s;
 }
 
-.tab-btn.active {
-    background: linear-gradient(135deg, #667eea, #764ba2);
-    color: white;
-    box-shadow: 0 2px 8px rgba(102, 126, 234, 0.3);
+.flip-toggle-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
 }
 
-.tab-content {
-    display: none;
-}
-
-.tab-content.active {
-    display: block;
-    animation: fadeIn 0.3s;
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(10px);
+@media (max-width: 768px) {
+    .flip-form-card {
+        height: 420px;
     }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
+    
+    .flip-form-front, .flip-form-back {
+        padding: 20px;
     }
-}
-
-.tab-content h3 {
-    color: #333;
-    margin-bottom: 20px;
-    font-size: 18px;
+    
+    .form-header h3 {
+        font-size: 16px;
+    }
+    
+    .flip-toggle-btn {
+        padding: 6px 12px;
+        font-size: 11px;
+    }
 }
 
 .form-group {

@@ -19,9 +19,10 @@ body {
     line-height: 1.5;
 }
 .sidebar {
+    width: 30%;
     position: fixed;
     width: var(--sidebar-width);
-    height: 100vh;
+    height: 100%;
     background: rgba(255, 255, 255, 0.96);
     backdrop-filter: blur(10px);
     border-right: 1px solid rgba(203, 213, 225, 0.5);
@@ -53,6 +54,13 @@ body {
     justify-content: space-between;
     gap: 12px;
     padding: 18px 20px 10px;
+}
+
+.sidebar-dot  {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
 }
 
 .sidebar .nav-toggle {
@@ -514,9 +522,10 @@ body:not(:has(:target)) .nav-item[href="#tenses"] {
 }
 
 .vocab-card {
-    background: #f1f5f9;
+    background: rgba(255, 255, 255, 0.8);
     padding: 1.2rem;
     border-radius: 1.2rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .vocab-card h3 {
@@ -532,6 +541,68 @@ body:not(:has(:target)) .nav-item[href="#tenses"] {
 .vocab-card li {
     padding: 0.3rem 0;
     font-size: 0.85rem;
+}
+
+/* Flip Card Styles */
+.flip-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 0.8rem;
+    margin-top: 1rem;
+}
+
+.flip-card {
+    background-color: transparent;
+    perspective: 1000px;
+    height: 80px;
+    cursor: pointer;
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card.flipped .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 0.9rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.flip-card-front {
+    background: linear-gradient(135deg, #6366f1, #8b5cf6);
+    color: white;
+}
+
+.flip-card-back {
+    background: linear-gradient(135deg, #10b981, #059669);
+    color: white;
+    transform: rotateY(180deg);
+}
+
+.flip-card-front span, .flip-card-back span {
+    text-transform: capitalize;
 }
 
 .preposition-rules {
@@ -1010,9 +1081,17 @@ body:not(:has(:target)) .nav-item[href="#tenses"] {
         font-size: 0.9rem;
     }
 
-    .vocab-card li {
-        font-size: 0.75rem;
-        padding: 0.2rem 0;
+    .flip-cards {
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+        gap: 0.6rem;
+    }
+
+    .flip-card {
+        height: 70px;
+    }
+
+    .flip-card-front span, .flip-card-back span {
+        font-size: 0.8rem;
     }
 
     .preposition-rules {
@@ -1155,6 +1234,10 @@ body:not(:has(:target)) .nav-item[href="#tenses"] {
 }
 
 @media (hover: none) and (pointer: coarse) {
+    .flip-card:hover .flip-card-inner {
+        transform: none;
+    }
+}
 
     button,
     .show-answer,
@@ -1170,7 +1253,6 @@ body:not(:has(:target)) .nav-item[href="#tenses"] {
         max-height: 70vh;
         overflow-y: auto;
     }
-}
 @media (min-width: 1440px) {
     :root {
         --sidebar-width: 320px;
@@ -1291,3 +1373,5 @@ body:not(:has(:target)) .nav-item[href="#tenses"] {
         padding: 32px 36px;
     }
 }
+
+

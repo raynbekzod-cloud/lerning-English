@@ -15,55 +15,57 @@
         <p>Saytga kiring yoki yangi hisob yarating</p>
 
         <div class="login-container">
-            <div class="login-form-card">
-                <div class="form-tabs">
-                    <button class="tab-btn active" data-tab="login"> Kirish</button>
-                    <button class="tab-btn" data-tab="signup"> Ro'yxatdan o'tish</button>
-                </div>
+            <div class="flip-form-card">
+                <div class="flip-form-inner">
+                    <!-- LOGIN FORM - FRONT -->
+                    <div class="flip-form-front">
+                        <div class="form-header">
+                            <h3>Hisobingizga kiring</h3>
+                            <button class="flip-toggle-btn" id="flipToSignup">Ro'yxatdan o'tish</button>
+                        </div>
+                        <div class="form-content">
+                            <form action="#">
+                                <div class="form-group">
+                                    <label>Telefon raqam</label>
+                                    <input type="tel" id="loginPhone" placeholder="+998 90 123 45 67" required>
+                                </div>
+                                <div class="form-group">
+                                    <label> Parol</label>
+                                    <input type="password" id="loginPassword" placeholder="Parolingiz" required>
+                                </div>
+                                <a href="./getinfo.html">
+                                    <button type="button" class="submit-btn"> Kirish</button>
+                                </a>
+                            </form>
+                            <div id="loginMsg" class="form-message"></div>
+                        </div>
+                    </div>
 
-                <!-- LOGIN FORM -->
-                <div id="loginForm" class="tab-content active">
-                    <h3>Hisobingizga kiring</h3>
-                    <form action="#">
-                        <div class="form-group">
-                            <label>Telefon raqam</label>
-                            <input type="tel" id="loginPhone" placeholder="+998 90 123 45 67" required>
+                    <!-- SIGNUP FORM - BACK -->
+                    <div class="flip-form-back">
+                        <div class="form-header">
+                            <h3>Yangi hisob yarating</h3>
+                            <button class="flip-toggle-btn" id="flipToLogin">Kirish</button>
                         </div>
-                        <div class="form-group">
-                            <label> Parol</label>
-                            <input type="password" id="loginPassword" placeholder="Parolingiz" required>
+                        <div class="form-content">
+                            <form id="signupFormElement">
+                                <div class="form-group">
+                                    <label>To'liq ism</label>
+                                    <input type="text" id="signupName" placeholder="Ismingiz" required>
+                                </div>
+                                <div class="form-group">
+                                    <label>Telefon raqam</label>
+                                    <input type="tel" id="signupPhone" placeholder="+998 90 123 45 67" required>
+                                </div>
+                                <div class="form-group">
+                                    <label>Parol</label>
+                                    <input type="password" id="signupPassword" placeholder="Parol (kamida 6 belgi)" required>
+                                </div>
+                                <button type="submit" class="submit-btn">Ro'yxatdan o'tish</button>
+                            </form>
+                            <div id="signupMsg" class="form-message"></div>
                         </div>
-                        <a href="./getinfo.html">
-                            <button type="button" class="submit-btn"> Kirish</button>
-                        </a>
-                    </form>
-                    <div id="loginMsg" class="form-message"></div>
-                </div>
-
-                <!-- SIGNUP FORM -->
-                <div id="signupForm" class="tab-content">
-                    <h3>Yangi hisob yarating</h3>
-                    <form id="signupFormElement">
-                        <div class="form-group">
-                            <label>To'liq ism</label>
-                            <input type="text" id="signupName" placeholder="Ismingiz" required>
-                        </div>
-                        <div class="form-group">
-                            <label>Telefon raqam</label>
-                            <input type="tel" id="signupPhone" placeholder="+998 90 123 45 67" required>
-                        </div>
-                        <div class="form-group">
-                            <label>Parol</label>
-                            <input type="password" id="signupPassword" placeholder="Parol (kamida 6 belgi)" required>
-                        </div>
-                        <div class="form-group">
-                            <label>Parolni takrorlang</label>
-                            <input type="password" id="signupConfirmPassword" placeholder="Parolni qayta kiriting"
-                                required>
-                        </div>
-                        <button type="submit" class="submit-btn">Ro'yxatdan o'tish</button>
-                    </form>
-                    <div id="signupMsg" class="form-message"></div>
+                    </div>
                 </div>
             </div>
 
@@ -96,15 +98,24 @@
             });
         }
 
-        // Tab o'zgartirish
-        document.querySelectorAll('.tab-btn').forEach(btn => {
-            btn.addEventListener('click', () => {
-                document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
-                document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
-                btn.classList.add('active');
-                document.getElementById(btn.dataset.tab + 'Form').classList.add('active');
+        // Flip card functionality
+        const flipToSignup = document.getElementById('flipToSignup');
+        const flipToLogin = document.getElementById('flipToLogin');
+        const flipFormInner = document.querySelector('.flip-form-inner');
+
+        if (flipToSignup) {
+            flipToSignup.addEventListener('click', (e) => {
+                e.preventDefault();
+                flipFormInner.style.transform = 'rotateY(180deg)';
             });
-        });
+        }
+
+        if (flipToLogin) {
+            flipToLogin.addEventListener('click', (e) => {
+                e.preventDefault();
+                flipFormInner.style.transform = 'rotateY(0deg)';
+            });
+        }
     </script>
 </body>
 

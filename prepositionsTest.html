@@ -10,13 +10,14 @@
 
 <body>
     <aside class="sidebar">
+        <input type="checkbox" id="navToggle" class="nav-toggle-checkbox">
         <div class="sidebar-top">
             <div><a href="Profile.html"><img class="sidebar-dot" src="./my photo.jpg" alt="profile"></a></div>
             <div class="brand">
                 <h2>GRAMMAR</h2>
                 <p>Interaktiv darslar | Navy Academy</p>
             </div>
-            <button class="nav-toggle" id="navToggle" type="button" aria-label="Open menu">☰</button>
+            <label for="navToggle" class="nav-toggle" aria-label="Open menu">☰</label>
         </div>
         <div class="nav-menu nav-links" id="navLinks">
             <a href="tens.html" class="nav-item"><span class="nav-icon"></span><span class="nav-text">Tenses</span></a>
@@ -41,24 +42,20 @@
         <div class="preposition-test">
             <h3>Testlar</h3>
             <div class="question">
-                <p>1. I wake up _____ 7 AM.</p><input type="text" class="answer-input" data-answer="at"><button
-                    class="show-answer">Javob</button><span class="answer-display"></span>
+                <p>1. I wake up _____ 7 AM.</p><input type="text" class="answer-input" data-answer="at"><details class="answer-details"><summary>Javob</summary><p>✅ Javob: at</p></details>
             </div>
             <div class="question">
-                <p>2. Let's meet _____ Monday.</p><input type="text" class="answer-input" data-answer="on"><button
-                    class="show-answer">Javob</button><span class="answer-display"></span>
+                <p>2. Let's meet _____ Monday.</p><input type="text" class="answer-input" data-answer="on"><details class="answer-details"><summary>Javob</summary><p>✅ Javob: on</p></details>
             </div>
             <div class="question">
-                <p>3. She was born _____ 1995.</p><input type="text" class="answer-input" data-answer="in"><button
-                    class="show-answer">Javob</button><span class="answer-display"></span>
+                <p>3. She was born _____ 1995.</p><input type="text" class="answer-input" data-answer="in"><details class="answer-details"><summary>Javob</summary><p>✅ Javob: in</p></details>
             </div>
             <div class="question">
-                <p>4. The book is _____ the table.</p><input type="text" class="answer-input" data-answer="on"><button
-                    class="show-answer">Javob</button><span class="answer-display"></span>
+                <p>4. The book is _____ the table.</p><input type="text" class="answer-input" data-answer="on"><details class="answer-details"><summary>Javob</summary><p>✅ Javob: on</p></details>
             </div>
             <div class="question">
                 <p>5. I drink coffee _____ the morning.</p><input type="text" class="answer-input"
-                    data-answer="in"><button class="show-answer">Javob</button><span class="answer-display"></span>
+                    data-answer="in"><details class="answer-details"><summary>Javob</summary><p>✅ Javob: in</p></details>
             </div>
         </div>
         <a href="prepositions.html"><button type="button" class="submit-btn">organishga qaytish</button></a>
@@ -90,43 +87,7 @@
         </div>
     </footer>
 
-        <script>
-            // Mobile menu toggle
-            const navToggle = document.getElementById('navToggle');
-            const navLinks = document.getElementById('navLinks');
 
-            if (navToggle) {
-                navToggle.addEventListener('click', () => {
-                    navLinks.classList.toggle('show');
-                });
-            }
-
-            // Close menu when clicking a link (mobile)
-            document.querySelectorAll('.nav-links a').forEach(link => {
-                link.addEventListener('click', () => {
-                    if (window.innerWidth <= 768) {
-                        navLinks.classList.remove('show');
-                    }
-                });
-            });
-
-            // Answer buttons
-            document.querySelectorAll('.show-answer').forEach(button => {
-                button.addEventListener('click', function () {
-                    const questionDiv = this.parentElement;
-                    const input = questionDiv.querySelector('.answer-input');
-                    const answerDisplay = questionDiv.querySelector('.answer-display');
-                    const correctAnswer = input.getAttribute('data-answer');
-
-                    if (answerDisplay) {
-                        answerDisplay.textContent = `✅ Javob: ${correctAnswer}`;
-                        answerDisplay.style.color = '#2563eb';
-                        answerDisplay.style.fontWeight = 'bold';
-                        answerDisplay.style.marginLeft = '10px';
-                    }
-                });
-            });
-        </script>
 </body>
 
 </html>

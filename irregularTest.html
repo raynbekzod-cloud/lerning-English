@@ -10,13 +10,14 @@
 
 <body>
     <aside class="sidebar">
+        <input type="checkbox" id="navToggle" class="nav-toggle-checkbox">
         <div class="sidebar-top">
             <div><a href="Profile.html"><img class="sidebar-dot" src="./my photo.jpg" alt="profile"></a></div>
             <div class="brand">
                 <h2>GRAMMAR</h2>
                 <p>Interaktiv darslar | Navy Academy</p>
             </div>
-            <button class="nav-toggle" id="navToggle" type="button" aria-label="Open menu">☰</button>
+            <label for="navToggle" class="nav-toggle" aria-label="Open menu">☰</label>
         </div>
         <div class="nav-menu nav-links" id="navLinks">
             <a href="tens.html" class="nav-item"><span class="nav-icon"></span><span class="nav-text">Tenses</span></a>
@@ -42,23 +43,23 @@
         <h3>Testlar</h3>
         <div class="question">
             <p>1. This is _____ (good) restaurant in town.</p><input type="text" class="answer-input"
-                data-answer="the best"><button class="show-answer">Javob</button><span class="answer-display"></span>
+                data-answer="the best"><details class="answer-details"><summary>Javob</summary><p>✅ Javob: the best</p></details>
         </div>
         <div class="question">
             <p>2. His health is getting _____ (bad).</p><input type="text" class="answer-input"
-                data-answer="worse"><button class="show-answer">Javob</button><span class="answer-display"></span>
+                data-answer="worse"><details class="answer-details"><summary>Javob</summary><p>✅ Javob: worse</p></details>
         </div>
         <div class="question">
             <p>3. I have _____ (little) money than you.</p><input type="text" class="answer-input"
-                data-answer="less"><button class="show-answer">Javob</button><span class="answer-display"></span>
+                data-answer="less"><details class="answer-details"><summary>Javob</summary><p>✅ Javob: less</p></details>
         </div>
         <div class="question">
             <p>4. She has _____ (much) experience than me.</p><input type="text" class="answer-input"
-                data-answer="more"><button class="show-answer">Javob</button><span class="answer-display"></span>
+                data-answer="more"><details class="answer-details"><summary>Javob</summary><p>✅ Javob: more</p></details>
         </div>
         <div class="question">
             <p>5. This is _____ (bad) day of my life.</p><input type="text" class="answer-input"
-                data-answer="the worst"><button class="show-answer">Javob</button><span class="answer-display"></span>
+                data-answer="the worst"><details class="answer-details"><summary>Javob</summary><p>✅ Javob: the worst</p></details>
         </div>
     </div>
     <a href="prepositions.html"><button type="button" class="submit-btn">organishga qaytish</button></a>
@@ -92,43 +93,7 @@
         </div>
     </footer>
 
-    <script>
-        // Mobile menu toggle
-        const navToggle = document.getElementById('navToggle');
-        const navLinks = document.getElementById('navLinks');
 
-        if (navToggle) {
-            navToggle.addEventListener('click', () => {
-                navLinks.classList.toggle('show');
-            });
-        }
-
-        // Close menu when clicking a link (mobile)
-        document.querySelectorAll('.nav-links a').forEach(link => {
-            link.addEventListener('click', () => {
-                if (window.innerWidth <= 768) {
-                    navLinks.classList.remove('show');
-                }
-            });
-        });
-
-        // Answer buttons
-        document.querySelectorAll('.show-answer').forEach(button => {
-            button.addEventListener('click', function () {
-                const questionDiv = this.parentElement;
-                const input = questionDiv.querySelector('.answer-input');
-                const answerDisplay = questionDiv.querySelector('.answer-display');
-                const correctAnswer = input.getAttribute('data-answer');
-
-                if (answerDisplay) {
-                    answerDisplay.textContent = `✅ Javob: ${correctAnswer}`;
-                    answerDisplay.style.color = '#2563eb';
-                    answerDisplay.style.fontWeight = 'bold';
-                    answerDisplay.style.marginLeft = '10px';
-                }
-            });
-        });
-    </script>
 </body>
 
 </html>

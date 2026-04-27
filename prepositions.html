@@ -10,13 +10,14 @@
 
 <body>
     <aside class="sidebar">
+        <input type="checkbox" id="navToggle" class="nav-toggle-checkbox">
         <div class="sidebar-top">
             <div><a href="Profile.html"><img class="sidebar-dot" src="./my photo.jpg" alt="profile"></a></div>
             <div class="brand">
                 <h2>GRAMMAR</h2>
                 <p>Interaktiv darslar | Navy Academy</p>
             </div>
-            <button class="nav-toggle" id="navToggle" type="button" aria-label="Open menu">☰</button>
+            <label for="navToggle" class="nav-toggle" aria-label="Open menu">☰</label>
         </div>
         <div class="nav-menu nav-links" id="navLinks">
             <a href="tens.html" class="nav-item"><span class="nav-icon"></span><span class="nav-text">Tenses</span></a>
@@ -98,26 +99,7 @@
         </div>
     </footer>
 
-    <script>
-        // Mobile menu toggle
-        const navToggle = document.getElementById('navToggle');
-        const navLinks = document.getElementById('navLinks');
 
-        if (navToggle) {
-            navToggle.addEventListener('click', () => {
-                navLinks.classList.toggle('show');
-            });
-        }
-
-        // Close menu when clicking a link (mobile)
-        document.querySelectorAll('.nav-links a').forEach(link => {
-            link.addEventListener('click', () => {
-                if (window.innerWidth <= 768) {
-                    navLinks.classList.remove('show');
-                }
-            });
-        });
-    </script>
 </body>
 
 </html>

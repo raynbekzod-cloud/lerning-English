@@ -129,6 +129,14 @@ body {
     transform-style: preserve-3d;
 }
 
+.flip-checkbox {
+    display: none;
+}
+
+.flip-checkbox:checked ~ .flip-form-card .flip-form-inner {
+    transform: rotateY(180deg);
+}
+
 .flip-form-front, .flip-form-back {
     position: absolute;
     width: 100%;

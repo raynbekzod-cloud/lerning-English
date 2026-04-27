@@ -15,13 +15,14 @@
         <p>Saytga kiring yoki yangi hisob yarating</p>
 
         <div class="login-container">
+            <input type="checkbox" id="flipCard" class="flip-checkbox">
             <div class="flip-form-card">
                 <div class="flip-form-inner">
                     <!-- LOGIN FORM - FRONT -->
                     <div class="flip-form-front">
                         <div class="form-header">
                             <h3>Hisobingizga kiring</h3>
-                            <button class="flip-toggle-btn" id="flipToSignup">Ro'yxatdan o'tish</button>
+                            <label for="flipCard" class="flip-toggle-btn">Ro'yxatdan o'tish</label>
                         </div>
                         <div class="form-content">
                             <form action="#">
@@ -45,7 +46,7 @@
                     <div class="flip-form-back">
                         <div class="form-header">
                             <h3>Yangi hisob yarating</h3>
-                            <button class="flip-toggle-btn" id="flipToLogin">Kirish</button>
+                            <label for="flipCard" class="flip-toggle-btn">Kirish</label>
                         </div>
                         <div class="form-content">
                             <form id="signupFormElement">
@@ -88,35 +89,7 @@
         </div>
     </section>
 
-    <script>
-        // Mobil menyu
-        const menuBtn = document.getElementById('menuBtn');
-        const navLinks = document.getElementById('navLinks');
-        if (menuBtn && navLinks) {
-            menuBtn.addEventListener('click', () => {
-                navLinks.classList.toggle('show');
-            });
-        }
 
-        // Flip card functionality
-        const flipToSignup = document.getElementById('flipToSignup');
-        const flipToLogin = document.getElementById('flipToLogin');
-        const flipFormInner = document.querySelector('.flip-form-inner');
-
-        if (flipToSignup) {
-            flipToSignup.addEventListener('click', (e) => {
-                e.preventDefault();
-                flipFormInner.style.transform = 'rotateY(180deg)';
-            });
-        }
-
-        if (flipToLogin) {
-            flipToLogin.addEventListener('click', (e) => {
-                e.preventDefault();
-                flipFormInner.style.transform = 'rotateY(0deg)';
-            });
-        }
-    </script>
 </body>
 
 </html>

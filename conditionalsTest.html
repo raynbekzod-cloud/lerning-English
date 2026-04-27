@@ -10,13 +10,14 @@
 
 <body>
     <aside class="sidebar">
+        <input type="checkbox" id="navToggle" class="nav-toggle-checkbox">
         <div class="sidebar-top">
             <div><a href="Profile.html"><img class="sidebar-dot" src="./my photo.jpg" alt="profile"></a></div>
             <div class="brand">
                 <h2>GRAMMAR</h2>
                 <p>Interaktiv darslar | Navy Academy</p>
             </div>
-            <button class="nav-toggle" id="navToggle" type="button" aria-label="Open menu">☰</button>
+            <label for="navToggle" class="nav-toggle" aria-label="Open menu">☰</label>
         </div>
         <div class="nav-menu nav-links" id="navLinks">
             <a href="tens.html" class="nav-item"><span class="nav-icon"></span><span class="nav-text">Tenses</span></a>
@@ -41,28 +42,23 @@
                 <h3>Testlar</h3>
                 <div class="question">
                     <p>1. If you heat ice, it _____ (melt).</p><input type="text" class="answer-input"
-                        data-answer="melts"><button class="show-answer">Javob</button><span
-                        class="answer-display"></span>
+                        data-answer="melts"><details class="answer-details"><summary>Javob</summary><p>✅ Javob: melts</p></details>
                 </div>
                 <div class="question">
                     <p>2. If it rains tomorrow, we _____ (stay) home.</p><input type="text" class="answer-input"
-                        data-answer="will stay"><button class="show-answer">Javob</button><span
-                        class="answer-display"></span>
+                        data-answer="will stay"><details class="answer-details"><summary>Javob</summary><p>✅ Javob: will stay</p></details>
                 </div>
                 <div class="question">
                     <p>3. If I _____ (be) you, I would go.</p><input type="text" class="answer-input"
-                        data-answer="were"><button class="show-answer">Javob</button><span
-                        class="answer-display"></span>
+                        data-answer="were"><details class="answer-details"><summary>Javob</summary><p>✅ Javob: were</p></details>
                 </div>
                 <div class="question">
                     <p>4. If she _____ (study), she would have passed.</p><input type="text" class="answer-input"
-                        data-answer="had studied"><button class="show-answer">Javob</button><span
-                        class="answer-display"></span>
+                        data-answer="had studied"><details class="answer-details"><summary>Javob</summary><p>✅ Javob: had studied</p></details>
                 </div>
                 <div class="question">
                     <p>5. If I had known, I _____ (come).</p><input type="text" class="answer-input"
-                        data-answer="would have come"><button class="show-answer">Javob</button><span
-                        class="answer-display"></span>
+                        data-answer="would have come"><details class="answer-details"><summary>Javob</summary><p>✅ Javob: would have come</p></details>
                 </div>
             </div>
         <a href="./conditionals.html"><button type="button" class="submit-btn">organishga qaytish</button></a>
@@ -96,43 +92,7 @@
         </div>
     </footer>
 
-        <script>
-            // Mobile menu toggle
-            const navToggle = document.getElementById('navToggle');
-            const navLinks = document.getElementById('navLinks');
 
-            if (navToggle) {
-                navToggle.addEventListener('click', () => {
-                    navLinks.classList.toggle('show');
-                });
-            }
-
-            // Close menu when clicking a link (mobile)
-            document.querySelectorAll('.nav-links a').forEach(link => {
-                link.addEventListener('click', () => {
-                    if (window.innerWidth <= 768) {
-                        navLinks.classList.remove('show');
-                    }
-                });
-            });
-
-            // Answer buttons
-            document.querySelectorAll('.show-answer').forEach(button => {
-                button.addEventListener('click', function () {
-                    const questionDiv = this.parentElement;
-                    const input = questionDiv.querySelector('.answer-input');
-                    const answerDisplay = questionDiv.querySelector('.answer-display');
-                    const correctAnswer = input.getAttribute('data-answer');
-
-                    if (answerDisplay) {
-                        answerDisplay.textContent = `✅ Javob: ${correctAnswer}`;
-                        answerDisplay.style.color = '#2563eb';
-                        answerDisplay.style.fontWeight = 'bold';
-                        answerDisplay.style.marginLeft = '10px';
-                    }
-                });
-            });
-        </script>
 </body>
 
 </html>

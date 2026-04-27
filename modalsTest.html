@@ -10,13 +10,14 @@
 
 <body>
     <aside class="sidebar">
+        <input type="checkbox" id="navToggle" class="nav-toggle-checkbox">
         <div class="sidebar-top">
             <div><a href="Profile.html"><img class="sidebar-dot" src="./my photo.jpg" alt="profile"></a></div>
             <div class="brand">
                 <h2>GRAMMAR</h2>
                 <p>Interaktiv darslar | Navy Academy</p>
             </div>
-            <button class="nav-toggle" id="navToggle" type="button" aria-label="Open menu">☰</button>
+            <label for="navToggle" class="nav-toggle" aria-label="Open menu">☰</label>
         </div>
         <div class="nav-menu nav-links" id="navLinks">
             <a href="tens.html" class="nav-item"><span class="nav-icon"></span><span class="nav-text">Tenses</span></a>
@@ -40,24 +41,22 @@
     <div class="preposition-test">
         <h3>Testlar</h3>
         <div class="question">
-            <p>1. I _____ swim when I was five.</p><input type="text" class="answer-input" data-answer="could"><button
-                class="show-answer">Javob</button><span class="answer-display"></span>
+            <p>1. I _____ swim when I was five.</p><input type="text" class="answer-input" data-answer="could"><details class="answer-details"><summary>Javob</summary><p>✅ Javob: could</p></details>
         </div>
         <div class="question">
             <p>2. You _____ eat in the library. (taqiq)</p><input type="text" class="answer-input"
-                data-answer="mustn't"><button class="show-answer">Javob</button><span class="answer-display"></span>
+                data-answer="mustn't"><details class="answer-details"><summary>Javob</summary><p>✅ Javob: mustn't</p></details>
         </div>
         <div class="question">
-            <p>3. _____ you help me?</p><input type="text" class="answer-input" data-answer="Could"><button
-                class="show-answer">Javob</button><span class="answer-display"></span>
+            <p>3. _____ you help me?</p><input type="text" class="answer-input" data-answer="Could"><details class="answer-details"><summary>Javob</summary><p>✅ Javob: Could</p></details>
         </div>
         <div class="question">
             <p>4. You _____ see a doctor. (maslahat)</p><input type="text" class="answer-input"
-                data-answer="should"><button class="show-answer">Javob</button><span class="answer-display"></span>
+                data-answer="should"><details class="answer-details"><summary>Javob</summary><p>✅ Javob: should</p></details>
         </div>
         <div class="question">
             <p>5. It _____ rain later, but I'm not sure.</p><input type="text" class="answer-input"
-                data-answer="might"><button class="show-answer">Javob</button><span class="answer-display"></span>
+                data-answer="might"><details class="answer-details"><summary>Javob</summary><p>✅ Javob: might</p></details>
         </div>
     </div>
             <a href="modal.html"><button type="button" class="submit-btn">organishga qaytish</button></a>
@@ -91,43 +90,7 @@
         </div>
     </footer>
 
-    <script>
-        // Mobile menu toggle
-        const navToggle = document.getElementById('navToggle');
-        const navLinks = document.getElementById('navLinks');
 
-        if (navToggle) {
-            navToggle.addEventListener('click', () => {
-                navLinks.classList.toggle('show');
-            });
-        }
-
-        // Close menu when clicking a link (mobile)
-        document.querySelectorAll('.nav-links a').forEach(link => {
-            link.addEventListener('click', () => {
-                if (window.innerWidth <= 768) {
-                    navLinks.classList.remove('show');
-                }
-            });
-        });
-
-        // Answer buttons
-        document.querySelectorAll('.show-answer').forEach(button => {
-            button.addEventListener('click', function () {
-                const questionDiv = this.parentElement;
-                const input = questionDiv.querySelector('.answer-input');
-                const answerDisplay = questionDiv.querySelector('.answer-display');
-                const correctAnswer = input.getAttribute('data-answer');
-
-                if (answerDisplay) {
-                    answerDisplay.textContent = `Javob: ${correctAnswer}`;
-                    answerDisplay.style.color = '#2563eb';
-                    answerDisplay.style.fontWeight = 'bold';
-                    answerDisplay.style.marginLeft = '10px';
-                }
-            });
-        });
-    </script>
 </body>
 
 </html>

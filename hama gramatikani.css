@@ -238,7 +238,6 @@ body:not(:has(:target)) .nav-item[href="#tenses"] {
     display: flex;
     gap: 0.3rem;
     list-style: none;
-    flex-wrap: wrap;
 }
 
 .nav-links li a {
@@ -1228,7 +1227,6 @@ body:not(:has(:target)) .nav-item[href="#tenses"] {
     }
 
     .nav-links {
-        max-height: 60vh;
         overflow-y: auto;
     }
 }
@@ -1250,7 +1248,6 @@ body:not(:has(:target)) .nav-item[href="#tenses"] {
     }
 
     .nav-links {
-        max-height: 70vh;
         overflow-y: auto;
     }
 @media (min-width: 1440px) {
@@ -1311,7 +1308,7 @@ body:not(:has(:target)) .nav-item[href="#tenses"] {
         gap: 8px;
     }
 
-    .sidebar .nav-links.show {
+    .nav-toggle-checkbox:checked ~ .nav-links {
         display: flex;
     }
 
@@ -1372,6 +1369,41 @@ body:not(:has(:target)) .nav-item[href="#tenses"] {
     .page-card {
         padding: 32px 36px;
     }
+}
+
+/* CSS-only mobile menu toggle */
+.nav-toggle-checkbox {
+    display: none;
+}
+
+.nav-toggle-checkbox:checked ~ .nav-links {
+    display: flex;
+}
+
+/* Details for answers */
+.answer-details {
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.answer-details summary {
+    background: #2563eb;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+.answer-details summary:hover {
+    background: #1d4ed8;
+}
+
+.answer-details p {
+    margin-top: 5px;
+    color: #2563eb;
+    font-weight: bold;
 }
 
 

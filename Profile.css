@@ -146,6 +146,7 @@ body {
 }
 
 .follow-btn {
+    text-decoration: none;
     background: #6c3fb0;
     padding: 0.7rem 2rem;
     border-radius: 40px;
@@ -154,8 +155,3 @@ body {
     cursor: default;
 }
 
-@media (max-width: 500px) {
-    .social-section {
-        flex-direction: column;
-    }
-}

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+    <title>Ingliz tili | Bosh sahifa</title>
+    <link rel="stylesheet" href="kirish.css">
+</head>
+
+<body>
+
+    <section class="vocabulary-section">
+        <h2>Hisobingizga kiring</h2>
+        <p>Saytga kiring yoki yangi hisob yarating</p>
+
+        <div class="login-container">
+            <input type="checkbox" id="flipCard" class="flip-checkbox">
+            <div class="flip-form-card">
+                <div class="flip-form-inner">
+                    <!-- LOGIN FORM - FRONT -->
+                    <div class="flip-form-front">
+                        <div class="form-header">
+                            <h3>Hisobingizga kiring</h3>
+                            <label for="flipCard" class="flip-toggle-btn">Ro'yxatdan o'tish</label>
+                        </div>
+                        <div class="form-content">
+                            <form action="#">
+                                <div class="form-group">
+                                    <label>Telefon raqam</label>
+                                    <input type="tel" id="loginPhone" placeholder="+998 90 123 45 67" required>
+                                </div>
+                                <div class="form-group">
+                                    <label> Parol</label>
+                                    <input type="password" id="loginPassword" placeholder="Parolingiz" required>
+                                </div>
+                                <a href="./getinfo.html">
+                                    <button type="button" class="submit-btn"> Kirish</button>
+                                </a>
+                            </form>
+                            <div id="loginMsg" class="form-message"></div>
+                        </div>
+                    </div>
+
+                    <!-- SIGNUP FORM - BACK -->
+                    <div class="flip-form-back">
+                        <div class="form-header">
+                            <h3>Yangi hisob yarating</h3>
+                            <label for="flipCard" class="flip-toggle-btn">Kirish</label>
+                        </div>
+                        <div class="form-content">
+                            <form id="signupFormElement">
+                                <div class="form-group">
+                                    <label>To'liq ism</label>
+                                    <input type="text" id="signupName" placeholder="Ismingiz" required>
+                                </div>
+                                <div class="form-group">
+                                    <label>Telefon raqam</label>
+                                    <input type="tel" id="signupPhone" placeholder="+998 90 123 45 67" required>
+                                </div>
+                                <div class="form-group">
+                                    <label>Parol</label>
+                                    <input type="password" id="signupPassword" placeholder="Parol (kamida 6 belgi)" required>
+                                </div>
+                                <button type="submit" class="submit-btn">Ro'yxatdan o'tish</button>
+                            </form>
+                            <div id="signupMsg" class="form-message"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- User Info Card -->
+            <div class="user-info-card" id="userInfoCard" style="display: none;">
+                <h3 id="userDisplayName">User</h3>
+                <p id="userDisplayPhone">+998 xx xxx xx xx</p>
+                <div class="user-stats">
+                    <div class="stat">
+                        <span class="stat-number" id="userProgress">0</span>
+                        <span class="stat-label">Test topshirilgan</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number" id="userCorrect">0</span>
+                        <span class="stat-label">To'g'ri javob</span>
+                    </div>
+                </div>
+                <button class="logout-btn" id="logoutBtn"> Chiqish</button>
+            </div>
+        </div>
+    </section>
+
+
+</body>
+
+</html>

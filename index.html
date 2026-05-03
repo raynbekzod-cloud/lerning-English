@@ -3,93 +3,89 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
-    <title>Ingliz tili | Bosh sahifa</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ingliz tili o'rganish</title>
     <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
+    <div class="container">
+        <div class="card">
 
-    <section class="vocabulary-section">
-        <h2>Hisobingizga kiring</h2>
-        <p>Saytga kiring yoki yangi hisob yarating</p>
+            <div class="welcome">
+                <h1>Xush kelibsiz</h1>
+                <p>Ingliz tilini o'rganishning eng oson usuli</p>
+            </div>
 
-        <div class="login-container">
-            <input type="checkbox" id="flipCard" class="flip-checkbox">
-            <div class="flip-form-card">
-                <div class="flip-form-inner">
-                    <!-- LOGIN FORM - FRONT -->
-                    <div class="flip-form-front">
-                        <div class="form-header">
-                            <h3>Hisobingizga kiring</h3>
-                            <label for="flipCard" class="flip-toggle-btn">Ro'yxatdan o'tish</label>
-                        </div>
-                        <div class="form-content">
-                            <form action="#">
-                                <div class="form-group">
-                                    <label>Telefon raqam</label>
-                                    <input type="tel" id="loginPhone" placeholder="+998 90 123 45 67" required>
-                                </div>
-                                <div class="form-group">
-                                    <label> Parol</label>
-                                    <input type="password" id="loginPassword" placeholder="Parolingiz" required>
-                                </div>
-                                <a href="./getinfo.html">
-                                    <button type="button" class="submit-btn"> Kirish</button>
-                                </a>
-                            </form>
-                            <div id="loginMsg" class="form-message"></div>
-                        </div>
+            <div class="line"></div>
+
+            <!-- REKLAMA - SAYT HAQIDA 1 -->
+            <div class="about-site">
+                <div class="big-text">O'zbekistonning eng yaxshi ingliz tili platformasi</div>
+                <div class="small-text">5000+ o'quvchi allaqachon bilimini oshirgan</div>
+            </div>
+
+            <!-- Saytda nimalar bor -->
+            <div class="features">
+                <div class="feature">
+                    <div class="feature-icon">1</div>
+                    <div class="feature-text">
+                        <h3>Hisobga kirish</h3>
+                        <p>Telefon raqamingiz bilan kiring</p>
                     </div>
+                </div>
 
-                    <!-- SIGNUP FORM - BACK -->
-                    <div class="flip-form-back">
-                        <div class="form-header">
-                            <h3>Yangi hisob yarating</h3>
-                            <label for="flipCard" class="flip-toggle-btn">Kirish</label>
-                        </div>
-                        <div class="form-content">
-                            <form id="signupFormElement">
-                                <div class="form-group">
-                                    <label>To'liq ism</label>
-                                    <input type="text" id="signupName" placeholder="Ismingiz" required>
-                                </div>
-                                <div class="form-group">
-                                    <label>Telefon raqam</label>
-                                    <input type="tel" id="signupPhone" placeholder="+998 90 123 45 67" required>
-                                </div>
-                                <div class="form-group">
-                                    <label>Parol</label>
-                                    <input type="password" id="signupPassword" placeholder="Parol (kamida 6 belgi)" required>
-                                </div>
-                                <button type="submit" class="submit-btn">Ro'yxatdan o'tish</button>
-                            </form>
-                            <div id="signupMsg" class="form-message"></div>
-                        </div>
+                <div class="feature">
+                    <div class="feature-icon">2</div>
+                    <div class="feature-text">
+                        <h3>Test topshirish</h3>
+                        <p>Turli mavzularda 300+ test</p>
+                    </div>
+                </div>
+
+                <div class="feature">
+                    <div class="feature-icon">3</div>
+                    <div class="feature-text">
+                        <h3>Natijalarni ko'rish</h3>
+                        <p>Nechta test va nechta to'g'ri javob</p>
                     </div>
                 </div>
             </div>
 
-            <!-- User Info Card -->
-            <div class="user-info-card" id="userInfoCard" style="display: none;">
-                <h3 id="userDisplayName">User</h3>
-                <p id="userDisplayPhone">+998 xx xxx xx xx</p>
-                <div class="user-stats">
-                    <div class="stat">
-                        <span class="stat-number" id="userProgress">0</span>
-                        <span class="stat-label">Test topshirilgan</span>
-                    </div>
-                    <div class="stat">
-                        <span class="stat-number" id="userCorrect">0</span>
-                        <span class="stat-label">To'g'ri javob</span>
-                    </div>
-                </div>
-                <button class="logout-btn" id="logoutBtn"> Chiqish</button>
+            <!-- REKLAMA - SAYT HAQIDA 2 -->
+            <div class="why-us">
+                <h4>Nima uchun aynan biz?</h4>
+                <ul>
+                    <li>Bepul va hech qanday to'lov yo'q</li>
+                    <li>Har kuni yangi testlar qo'shiladi</li>
+                    <li>Telefon raqam orqali tezkor kirish</li>
+                    <li>Natijalaringizni kuzatib boring</li>
+                </ul>
             </div>
+
+
+            <!-- REKLAMA - SAYT HAQIDA 3 -->
+            <div class="site-stats">
+                <div>
+                    <div class="number">300+</div>
+                    <div class="label">Testlar</div>
+                </div>
+                <div>
+                    <div class="number">5000+</div>
+                    <div class="label">O'quvchilar</div>
+                </div>
+                <div>
+                    <div class="number">24/7</div>
+                    <div class="label">Kirish</div>
+                </div>
+                
+            </div>
+            <a href="kirish.html">
+                    <button type="button" class="submit-btn">boshlash</button>
+                </a>
         </div>
-    </section>
-
-
+    </div>
 </body>
 
 </html>

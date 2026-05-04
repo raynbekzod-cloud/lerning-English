@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>So'rov qabul qilindi</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            background: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            padding: 1.5rem;
+        }
+
+        .card {
+            max-width: 500px;
+            width: 100%;
+            background: #ffffff;
+            border-radius: 2rem;
+            border: 1px solid #e0e0e0;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            padding: 2.5rem 1.8rem;
+            text-align: center;
+        }
+
+        .logo {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        h1 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #1a1a2e;
+            margin-bottom: 2rem;
+        }
+
+        /* LOADER (zagruzka) oq fonda chiroyli ko'rinadi */
+        .loader {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 12px;
+            margin: 2rem 0;
+        }
+
+        .dot {
+            width: 18px;
+            height: 18px;
+            background: #2c7da0;
+            border-radius: 50%;
+            animation: bounce 0.6s infinite alternate;
+        }
+
+        .dot:nth-child(2) {
+            animation-delay: 0.2s;
+            background: #61a5c2;
+        }
+
+        .dot:nth-child(3) {
+            animation-delay: 0.4s;
+            background: #89c2d9;
+        }
+
+        @keyframes bounce {
+            0% {
+                transform: translateY(0px);
+                opacity: 0.5;
+            }
+            100% {
+                transform: translateY(-18px);
+                opacity: 1;
+            }
+        }
+
+        .loading-text {
+            color: #2c7da0;
+            font-size: 1rem;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+            margin-top: 0.5rem;
+        }
+
+        /* Natija matni */
+        .message {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin: 2rem 0;
+            padding: 1.2rem;
+            background: #e8f4f8;
+            border-radius: 60px;
+            color: #1f5068;
+            border: 1px solid #c0e0e8;
+        }
+
+        .message span {
+            font-size: 1.8rem;
+            display: inline-block;
+            margin-right: 8px;
+        }
+
+        /* yashirish */
+        .hidden {
+            display: none;
+        }
+
+        /* animatsiya */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: scale(0.96);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        .fade-in {
+            animation: fadeIn 0.4s ease-out;
+        }
+    </style>
+</head>
+<body>
+
+<div class="card">
+
+    <div id="loaderContainer">
+        <div class="loader">
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+        </div>
+        <div class="loading-text">So'rov jo'natilmoqda...</div>
+        <a href="tens.html">
+            <button style="margin-top: 1.5rem; padding: 0.8rem 1.5rem; background: #2c7da0; color: white; border: none; border-radius: 30px; cursor: pointer;">Orqaga qaytish</button>
+    </div>
+
+    <div id="resultContainer" class="hidden">
+        <div class="message fade-in">
+            <span>✅</span> Sizning so'rovingiz qabul qilindi
+        </div>
+    </div>
+</div>
+
+<script>
+    // Sahifa ochilganda avtomatik: 3 soniya yuklanish, keyin natija chiqadi
+    window.addEventListener('DOMContentLoaded', function() {
+        const loaderDiv = document.getElementById('loaderContainer');
+        const resultDiv = document.getElementById('resultContainer');
+
+        setTimeout(function() {
+            loaderDiv.classList.add('hidden');
+            resultDiv.classList.remove('hidden');
+        }, 3000);
+    });
+</script>
+
+</body>
+</html>

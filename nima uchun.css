@@ -1,0 +1,129 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f7fb;
+}
+
+/* APP */
+.app {
+    max-width: 420px;
+    margin: auto;
+    padding: 15px;
+}
+
+/* TOP */
+.top {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.back {
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* PROGRESS */
+.progress {
+    flex: 1;
+    height: 6px;
+    background: #e0e6ed;
+    border-radius: 10px;
+}
+
+.bar {
+    width: 20%;
+    height: 100%;
+    background: #4a90e2;
+    border-radius: 10px;
+}
+
+/* TITLE */
+h1 {
+    text-align: center;
+    font-size: 22px;
+    color: #1f4e79;
+    margin-bottom: 20px;
+}
+
+/* LIST */
+.list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+/* ITEM */
+.item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f2f4f7;
+    padding: 15px;
+    border-radius: 15px;
+    border: 1px solid #e0e6ed;
+    cursor: pointer;
+}
+
+.left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.icon {
+    font-size: 20px;
+}
+
+.item p {
+    font-size: 14px;
+}
+
+/* RADIO */
+.item input {
+    display: none;
+}
+
+.radio {
+    width: 18px;
+    height: 18px;
+    border: 2px solid #c0c7d1;
+    border-radius: 50%;
+}
+
+/* checked */
+.item input:checked + .radio {
+    border: 6px solid #4a90e2;
+}
+
+/* BUTTON */
+.btn {
+    width: 100%;
+    margin-top: 20px;
+    padding: 15px;
+    border: none;
+    border-radius: 15px;
+    background: #4a90e2;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: #357bd8;
+}
+
+/* FOOTER */
+.footer {
+    text-align: center;
+    font-size: 10px;
+    color: gray;
+    margin-top: 15px;
+}

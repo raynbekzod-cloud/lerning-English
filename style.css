@@ -11,7 +11,6 @@ body {
 }
 
 /* HEADER */
-
 header {
     width: 100%;
     height: 85px;
@@ -27,7 +26,6 @@ header {
     font-size: 34px;
     font-weight: bold;
     text-transform: uppercase;
-    letter-spacing: 1px;
 }
 
 .nav {
@@ -44,11 +42,6 @@ header {
     color: white;
     font-weight: bold;
     cursor: pointer;
-    transition: 0.3s;
-}
-
-.login:hover {
-    background: #101826;
 }
 
 .free {
@@ -59,11 +52,6 @@ header {
     color: black;
     font-weight: bold;
     cursor: pointer;
-    transition: 0.3s;
-}
-
-.free:hover {
-    transform: scale(1.05);
 }
 
 .menu {
@@ -75,12 +63,9 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    cursor: pointer;
-    font-size: 22px;
 }
 
 /* HERO */
-
 .hero {
     width: 100%;
     min-height: 700px;
@@ -90,48 +75,11 @@ header {
     align-items: center;
     gap: 80px;
     padding: 60px 80px;
-    position: relative;
-    overflow: hidden;
-}
-
-/* orqa doira */
-
-.hero::before {
-    content: "";
-    position: absolute;
-    width: 700px;
-    height: 700px;
-    background: rgba(255,255,255,0.08);
-    border-radius: 50%;
-    right: -250px;
-    top: -150px;
-}
-
-.hero::after {
-    content: "";
-    position: absolute;
-    width: 500px;
-    height: 500px;
-    background: rgba(255,255,255,0.06);
-    border-radius: 50%;
-    left: -180px;
-    bottom: -180px;
-}
-
-/* LEFT */
-
-.left {
-    position: relative;
-    z-index: 5;
-    max-width: 550px;
 }
 
 .left h1 {
     color: white;
     font-size: 60px;
-    line-height: 1.3;
-    margin-bottom: 35px;
-    font-weight: bold;
 }
 
 .start {
@@ -139,79 +87,16 @@ header {
     border: none;
     border-radius: 16px;
     background: #9cff00;
-    color: black;
     font-weight: bold;
-    font-size: 18px;
     cursor: pointer;
-    transition: 0.3s;
-}
-
-.start:hover {
-    transform: scale(1.06);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-}
-
-/* PHONE */
-
-.phone {
-    position: relative;
-    z-index: 5;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-/* glow */
-
-.phone::before {
-    content: "";
-    position: absolute;
-    width: 430px;
-    height: 430px;
-    background: radial-gradient(circle,
-            rgba(255,255,255,0.45),
-            transparent 70%);
-    border-radius: 50%;
-    animation: glow 4s infinite ease-in-out;
 }
 
 .phone img {
-    width: 690px;
+    width: 600px;
     max-width: 100%;
-    border-radius: 40px;
-    transform: rotate(-10deg);
-    transition: 0.5s;
-    filter:
-        drop-shadow(0 30px 40px rgba(0,0,0,0.25))
-        drop-shadow(0 10px 15px rgba(0,0,0,0.15));
-}
-
-.phone img:hover {
-    transform: rotate(0deg) scale(1.08);
-}
-
-/* animation */
-
-@keyframes glow {
-
-    0% {
-        transform: scale(1);
-        opacity: 0.7;
-    }
-
-    50% {
-        transform: scale(1.1);
-        opacity: 1;
-    }
-
-    100% {
-        transform: scale(1);
-        opacity: 0.7;
-    }
 }
 
 /* STATS */
-
 .stats {
     width: 85%;
     margin: -70px auto 80px;
@@ -222,123 +107,100 @@ header {
     justify-content: space-around;
     text-align: center;
     box-shadow: 0 15px 35px rgba(0,0,0,0.08);
-    position: relative;
-    z-index: 10;
 }
 
 .stat h2 {
     font-size: 42px;
     color: #1f73f1;
-    margin-bottom: 10px;
-}
-
-.stat p {
-    color: #555;
-    line-height: 1.7;
 }
 
 /* SECTION */
-
 .section {
     width: 85%;
     margin: 100px auto;
 }
 
 .title {
-    font-size: 70px;
-    line-height: 1.3;
-    margin-bottom: 90px;
-    font-weight: bold;
+    font-size: 60px;
+    margin-bottom: 80px;
 }
 
-.blue {
-    color: #1f73f1;
-}
-
-.black {
-    color: #222;
-}
+.blue { color: #1f73f1; }
+.black { color: #222; }
 
 .content {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 80px;
 }
 
 .text h3 {
     color: #7ad800;
-    font-size: 52px;
-    margin-bottom: 25px;
+    font-size: 50px;
 }
 
 .text p {
     color: #555;
-    line-height: 2;
     font-size: 18px;
-    max-width: 550px;
+    max-width: 500px;
 }
 
 .image img {
-    width: 380px;
-    max-width: 100%;
-    animation: float 4s ease-in-out infinite;
+    width: 350px;
 }
 
-/* image animation */
+/* 🔥 REVIEWS */
+.reviews {
+    width: 85%;
+    margin: 100px auto;
+    text-align: center;
+}
 
-@keyframes float {
+.reviews-title {
+    font-size: 42px;
+    margin-bottom: 50px;
+    color: #1f73f1;
+}
 
-    0% {
-        transform: translateY(0);
-    }
+.reviews-container {
+    display: flex;
+    gap: 30px;
+}
 
-    50% {
-        transform: translateY(-15px);
-    }
+.review {
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    flex: 1;
+    transition: 0.3s;
+}
 
-    100% {
-        transform: translateY(0);
-    }
+.review:hover {
+    transform: translateY(-8px);
+}
+
+.review p {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.review h4 {
+    color: #1f73f1;
 }
 
 /* RESPONSIVE */
-
 @media(max-width:900px) {
-
-    header {
-        padding: 0 20px;
-    }
 
     .hero {
         flex-direction: column;
         text-align: center;
-        padding: 80px 20px;
-        gap: 60px;
-    }
-
-    .left h1 {
-        font-size: 40px;
-    }
-
-    .phone img {
-        width: 290px;
-    }
-
-    .phone::before {
-        width: 300px;
-        height: 300px;
     }
 
     .stats {
         flex-direction: column;
-        gap: 40px;
-        margin-top: 40px;
-    }
-
-    .title {
-        font-size: 42px;
-        text-align: center;
+        gap: 30px;
     }
 
     .content {
@@ -346,11 +208,11 @@ header {
         text-align: center;
     }
 
-    .text h3 {
-        font-size: 38px;
+    .reviews-container {
+        flex-direction: column;
     }
 
-    .image img {
-        width: 260px;
+    .left h1 {
+        font-size: 38px;
     }
 }

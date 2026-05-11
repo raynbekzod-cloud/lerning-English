@@ -1,79 +1,424 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="uz">
 <head>
     <meta charset="UTF-8">
-    <title>Graceful User Profile</title>
-    <link rel="stylesheet" href="Profile.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abdulkhalilov Bekzod - Profile</title>
+    <link rel="stylesheet" href="profile.css">
 </head>
-
 <body>
-    <div class="main">
-
-    <div class="profile-card">
-        <div class="profile-header">
-            <h2>FOYDALANUVCHI PROFILI</h2>
+    <aside class="sidebar">
+        <div class="logo">
+            <img class="logo-icon" src="avatara.jpg">
+            <span>Bekbridge </span>
         </div>
-        <div class="profile-body">
-            <div class="avatar">
-                <img class="avatar-img" src="avatar.jpg" alt="User Avatar">
-            </div>
-            <div class="name">Abdulkhalilov Bekzod</div>
-            <div class="location">Tashkent, Uzbekistan</div>
 
-            <div class="skills">
-                <div class="skill-badge">B1</div>
-                <div class="skill-badge">Junior</div>
-                <div class="skill-badge">Liderlik</div>
-            </div>
+        <nav>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="#" class="nav-link active">
+                        <span class="nav-icon"></span>
+                        Profile
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <span class="nav-icon"></span>
+                        Testlar
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <span class="nav-icon"></span>
+                        O'quv Materiallar
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <span class="nav-icon"></span>
+                        Natijalar
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <span class="nav-icon"></span>
+                        Sertifikatlar
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <span class="nav-icon"></span>
+                        Sozlamalar
+                    </a>
+                </li>
+            </ul>
+        </nav>
 
-            <div class="stats">
-                <div class="stat-item">
-                    <div class="stat-number">929</div>
-                    <div class="stat-label">Obunachilari</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-number">4148</div>
-                    <div class="stat-label">Obunachi</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-number">252</div>
-                    <div class="stat-label">Proektlari</div>
+        <div class="sidebar-footer">
+            <div class="user-info">
+                <img class="user-avatar" src="avatar.jpg" alt="">
+                <div class="user-details">
+                    <h4>Abdulkhalilov Bekzod</h4>
+                    <p>B1 Level - Junior</p>
                 </div>
             </div>
-            
-            
-            <!-- Statistika -->
-            <div class="stats">
-                <div class="stat-card">
-                    <div class="stat-number">3724 </div>
-                    <div class="stat-label">Test topshirilgan</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-number">2847</div>
-                    <div class="stat-label">To'g'ri javob</div>
-                </div>
-            </div>
-            
-
-            <div class="description">git add <div class=""></div>
-                <p>
-                   Lorem Ipsum - oddiygina soxta matn<br>
-                    Matbaa va matn terish sanoati. Lorem Ipsum<br>
-                    Sanoatning standart qo'g'irchoq matni bo'lgan<br>
-                    1500-yillardan beri.
-                </p>
-            </div>
-
-            <div class="social-section">
-            </div>
-            <a href="biz bilan boqlanish.html" class="follow-btn">biz bilan boqlanish</a>
-            <a href="ielts.html" class="follow-btn">IELTS olish maslahatlar</a>
-
         </div>
-    </div>
-    </div>
+    </aside>
 
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Page Header -->
+        <header class="page-header">
+            <div class="header-left">
+                <h1>Profile</h1>
+            </div>
+            <div class="header-actions">
+                <a href="ielts.html"><button class="btn btn-secondary">IELTS olish maslahatlar</button></a>
+                <a href="biz bilan boqlanish.html"><button class="btn btn-primary">biz bilan boqlanish</button></a>
+            </div>
+        </header>
+
+        <!-- Profile Summary -->
+        <div class="card" style="padding: 0; overflow: hidden; margin-bottom: 30px;">
+            <div class="profile-summary">
+                <img class="profile-avatar-large" src="avatara.jpg" alt="">
+                <div class="profile-info">
+                    <h3>Abdulkhalilov Bekzod</h3>
+                    <p>Tashkent, Uzbekistan</p>
+                    <div class="profile-tags">
+                        <span class="profile-tag">B1 Level</span>
+                        <span class="profile-tag">Junior Developer</span>
+                        <span class="profile-tag">Team Leader</span>
+                    </div>
+                </div>
+                <div class="quick-stats">
+                    <div class="quick-stat">
+                        <span class="quick-stat-value">929</span>
+                        <span class="quick-stat-label">Obunachilari</span>
+                    </div>
+                    <div class="quick-stat">
+                        <span class="quick-stat-value">4148</span>
+                        <span class="quick-stat-label">Obunachi</span>
+                    </div>
+                    <div class="quick-stat">
+                        <span class="quick-stat-value">252</span>
+                        <span class="quick-stat-label">Proektlar</span>
+                    </div>
+                    <div class="quick-stat">
+                        <span class="quick-stat-value">76%</span>
+                        <span class="quick-stat-label">Muvaffaqiyat</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Stats Grid -->
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-header">
+                    <span class="stat-title">Topshirilgan Testlar</span>
+                    <div class="stat-icon blue">T</div>
+                </div>
+                <div class="stat-value">3,724</div>
+                <div class="stat-change positive">
+                    ↑ 12% bu oyda
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-header">
+                    <span class="stat-title">To'g'ri Javoblar</span>
+                    <div class="stat-icon green">✓</div>
+                </div>
+                <div class="stat-value">2,847</div>
+                <div class="stat-change positive">
+                    ↑ 8% bu oyda
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-header">
+                    <span class="stat-title">O'rtacha Ball</span>
+                    <div class="stat-icon purple">★</div>
+                </div>
+                <div class="stat-value">76.5</div>
+                <div class="stat-change positive">
+                    ↑ 5.2% bu oyda
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-header">
+                    <span class="stat-title">O'rganish Vaqti</span>
+                    <div class="stat-icon orange">⏱</div>
+                </div>
+                <div class="stat-value">148h</div>
+                <div class="stat-change negative">
+                    ↓ 3% bu oyda
+                </div>
+            </div>
+        </div>
+
+        <!-- Content Grid -->
+        <div class="content-grid">
+            <!-- Performance Chart -->
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">Test Natijalari Statistikasi</h3>
+                    <a href="#" class="card-action">Batafsil ko'rish</a>
+                </div>
+                <div class="chart-container">
+                    <div class="chart-bars">
+                        <div class="chart-bar" style="height: 60%;">
+                            <span class="chart-bar-label">Yan</span>
+                        </div>
+                        <div class="chart-bar" style="height: 75%;">
+                            <span class="chart-bar-label">Fev</span>
+                        </div>
+                        <div class="chart-bar" style="height: 65%;">
+                            <span class="chart-bar-label">Mar</span>
+                        </div>
+                        <div class="chart-bar" style="height: 85%;">
+                            <span class="chart-bar-label">Apr</span>
+                        </div>
+                        <div class="chart-bar" style="height: 70%;">
+                            <span class="chart-bar-label">May</span>
+                        </div>
+                        <div class="chart-bar" style="height: 90%;">
+                            <span class="chart-bar-label">Iyun</span>
+                        </div>
+                        <div class="chart-bar" style="height: 80%;">
+                            <span class="chart-bar-label">Iyul</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Skills Progress -->
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">Ko'nikmalar</h3>
+                    <a href="#" class="card-action">Hammasi</a>
+                </div>
+                <div class="skills-list">
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">Grammar</span>
+                            <span class="skill-percentage">85%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 85%"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">Vocabulary</span>
+                            <span class="skill-percentage">78%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 78%"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">Listening</span>
+                            <span class="skill-percentage">92%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 92%"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">Speaking</span>
+                            <span class="skill-percentage">70%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 70%"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">Reading</span>
+                            <span class="skill-percentage">88%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 88%"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">Writing</span>
+                            <span class="skill-percentage">65%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 65%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Recent Activity and Tests -->
+        <div class="content-grid">
+            <!-- Recent Activity -->
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">Oxirgi Faoliyatlar</h3>
+                    <a href="#" class="card-action">Barchasini ko'rish</a>
+                </div>
+                <div class="activity-list">
+                    <div class="activity-item">
+                        <div class="activity-icon blue">T</div>
+                        <div class="activity-content">
+                            <div class="activity-title">Grammar Test tugallandi</div>
+                            <div class="activity-description">Present Perfect Tense - 45/50 ball</div>
+                            <div class="activity-time">2 soat oldin</div>
+                        </div>
+                    </div>
+
+                    <div class="activity-item">
+                        <div class="activity-icon green">✓</div>
+                        <div class="activity-content">
+                            <div class="activity-title">Sertifikat olindi</div>
+                            <div class="activity-description">English Grammar Intermediate Certificate</div>
+                            <div class="activity-time">5 soat oldin</div>
+                        </div>
+                    </div>
+
+                    <div class="activity-item">
+                        <div class="activity-icon purple">V</div>
+                        <div class="activity-content">
+                            <div class="activity-title">Vocabulary o'rganildi</div>
+                            <div class="activity-description">50 ta yangi so'z qo'shildi - Academic section</div>
+                            <div class="activity-time">Kecha</div>
+                        </div>
+                    </div>
+
+                    <div class="activity-item">
+                        <div class="activity-icon orange">L</div>
+                        <div class="activity-content">
+                            <div class="activity-title">Listening mashq qilindi</div>
+                            <div class="activity-description">BBC News podcast - 30 daqiqa tinglandi</div>
+                            <div class="activity-time">2 kun oldin</div>
+                        </div>
+                    </div>
+
+                    <div class="activity-item">
+                        <div class="activity-icon info">R</div>
+                        <div class="activity-content">
+                            <div class="activity-title">Reading practice</div>
+                            <div class="activity-description">Article: Climate Change Effects - 8 min</div>
+                            <div class="activity-time">3 kun oldin</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Recent Tests -->
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">Oxirgi Testlar</h3>
+                    <a href="#" class="card-action">Hammasi</a>
+                </div>
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Test Nomi</th>
+                            <th>Ball</th>
+                            <th>Status</th>
+                            <th>Sana</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Present Perfect Tense</td>
+                            <td>45/50</td>
+                            <td><span class="badge success">Yuqori</span></td>
+                            <td>12 Mar 2024</td>
+                        </tr>
+                        <tr>
+                            <td>Vocabulary Quiz #15</td>
+                            <td>38/50</td>
+                            <td><span class="badge warning">O'rtacha</span></td>
+                            <td>11 Mar 2024</td>
+                        </tr>
+                        <tr>
+                            <td>Listening Practice</td>
+                            <td>46/50</td>
+                            <td><span class="badge success">Yuqori</span></td>
+                            <td>10 Mar 2024</td>
+                        </tr>
+                        <tr>
+                            <td>Reading Comprehension</td>
+                            <td>42/50</td>
+                            <td><span class="badge success">Yuqori</span></td>
+                            <td>8 Mar 2024</td>
+                        </tr>
+                        <tr>
+                            <td>Grammar Mixed</td>
+                            <td>35/50</td>
+                            <td><span class="badge warning">O'rtacha</span></td>
+                            <td>7 Mar 2024</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Learning Goals -->
+        <div class="card">
+            <div class="card-header">
+                <h3 class="card-title">O'quv Maqsadlari</h3>
+                <a href="#" class="card-action">Tahrirlash</a>
+            </div>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-title">IELTS Band 7.0</div>
+                    <div class="progress-bar" style="margin-top: 15px;">
+                        <div class="progress-fill" style="width: 65%"></div>
+                    </div>
+                    <div style="margin-top: 10px; font-size: 13px; color: #718096;">
+                        65% tugallangan - Muddati: 30 Apr 2024
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-title">1000 ta yangi so'z</div>
+                    <div class="progress-bar" style="margin-top: 15px;">
+                        <div class="progress-fill" style="width: 68%"></div>
+                    </div>
+                    <div style="margin-top: 10px; font-size: 13px; color: #718096;">
+                        680/1000 so'z o'rganilgan
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-title">30 kunlik Streak</div>
+                    <div class="progress-bar" style="margin-top: 15px;">
+                        <div class="progress-fill" style="width: 90%"></div>
+                    </div>
+                    <div style="margin-top: 10px; font-size: 13px; color: #718096;">
+                        27/30 kun - 3 kun qoldi!
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-title">Grammar Mastery</div>
+                    <div class="progress-bar" style="margin-top: 15px;">
+                        <div class="progress-fill" style="width: 75%"></div>
+                    </div>
+                    <div style="margin-top: 10px; font-size: 13px; color: #718096;">
+                        18/24 mavzu tugallangan
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
 </body>
-
 </html>
